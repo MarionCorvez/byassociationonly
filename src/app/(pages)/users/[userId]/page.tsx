@@ -1,4 +1,4 @@
-// import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 
 async function fetchUser(id: string) {
   const response = await fetch(
@@ -19,11 +19,10 @@ export default async function UserPage({
   const { userId } = await params;
   const user = await fetchUser(userId);
 
-  /*
   if (!user) {
     notFound();
   }
-*/
+
   return (
     <div>
       <h1>{user.name}</h1>

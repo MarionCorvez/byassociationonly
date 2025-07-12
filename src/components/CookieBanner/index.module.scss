@@ -1,0 +1,47 @@
+// className={styles.cookie-banner}
+
+.cookie_banner {
+  :where(.content) {
+  }
+  :where(.actions) {
+    :where(.link) {
+    }
+    :where(.button) {
+    }
+    :where(.is_dark) {
+    }
+  }
+}
+
+/*
+
+.panel {}
+
+.card {
+
+	:where(.container) {}
+	@container card-container (800px <= width <= 1200px) {}
+	@container card-container (width > 1200px) {}
+	:where(.txt-wrapper) {}
+	:where(.content) {}
+	:where(.cat) {}
+	:where(.head) {}
+	:where(.subhead) {}
+	:where(.details) {}
+	:where(.author) {}
+	:where(.tag) {}  	
+
+  :where(.media-wrapper) {}
+	:where(.media) {}
+
+	:where(.button) {}
+	:where(.icon-wrapper) {}
+	:where(.icon) {}
+	:where(.link) {}
+
+	&:where(.card--innered) { colors }
+	&:where(.card--featured) { colors }
+
+}
+
+*/

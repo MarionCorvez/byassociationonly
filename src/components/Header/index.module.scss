@@ -1,0 +1,59 @@
+.container {
+  background-color: aqua;
+  gap: var(--padding-xs);
+  align-items: center;
+  padding: var(--padding-s);
+}
+
+.title {
+  text-transform: lowercase;
+}
+
+.availability {
+  padding-top: var(--padding-xs);
+}
+
+@media screen and (width > 1024px) {
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+  }
+  .availability {
+    padding-top: 0;
+  }
+}
+
+/* Heading animation */
+@media (prefers-reduced-motion: no-preference) {
+  .title {
+    animation: 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s 1 normal both
+      running expand;
+  }
+
+  @-webkit-keyframes expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.container {
+  flex-direction: column;
+  padding: var(--padding-s);
+  gap: var(--padding-xs);
+}
+
+.ecoindex {
+  margin-top: var(--padding-xs);
+}
+
+@media screen and (width >= 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ecoindex {
+    margin-top: 0;
+  }
+}
