@@ -1,3 +1,9 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.section_footer {
+  @extend %flex;
+}
+
 .container {
   flex-direction: column;
   padding: var(--padding-s);
@@ -6,6 +12,14 @@
 
 .ecoindex {
   margin-top: var(--padding-xs);
+}
+
+.none {
+  background-color: aquamarine;
+
+  @include a.bp(medium) {
+    display: none;
+  }
 }
 
 @media screen and (width >= 768px) {

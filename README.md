@@ -22,8 +22,8 @@ The By Association Only's website is an example of good design and UI, managing 
 0. [x] Step 0: Define the scope: objectives, features and functionalities
 1. [x] Step 1: Set up development environment
 2. [x] Step 2: Identify reusable front-end components and patterns
-3. [ ] Step 3: Design responsive behavior on different devices
-4. [ ] Step 4: Develop static templates
+3. [x] Step 3: Design responsive behavior on different devices
+4. [x] Step 4: Develop static templates
 5. [ ] Step 5: Create and implement styles
 6. [x] Step 6: Create project's REST API
 7. [ ] Step 7: Develop interactivity and functionality
@@ -39,7 +39,7 @@ The By Association Only's website is an example of good design and UI, managing 
 - Parallax effects
 - Horizontal scroll
 - Data fetching with JSON API
-- Sticky navigation
+- Sticky navigation & items
 - Conditional rendering of components
 - Contact form
 - Cookies banner

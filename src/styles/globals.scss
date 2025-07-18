@@ -1,0 +1,145 @@
+// Global import
+// @forward "./abstracts/index.scss";
+
+// Global import & Specific use
+@use "./abstracts/index.scss" as a;
+// In components
+// @use "../../styles/abstracts/index.scss" as a;
+
+/*
+  ========================================
+  $Globals
+  ========================================
+*/
+
+/* 1...............................Base */
+/* 2..............................Reset */
+
+/*
+  ========================================
+  $Base
+  ========================================
+*/
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  // background: var(--background);
+  // color: a.var(--base-color);
+  //color: a.$primary-color;
+  padding-top: 90px;
+  font-family: Soehne web leicht, sans-serif;
+  font-size: var(--f-base);
+  font-weight: 200;
+  line-height: 150%;
+  overflow: visible;
+  min-height: 100vh;
+}
+
+/* a {
+  font-size: 25px;
+} */
+
+// import from site
+/* 
+.intro_container {
+  grid-column-gap: 30px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: start;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: grid;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+.cta_grid {
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  // filter: saturate();
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.item-l {
+  grid-area: 1 / 1 / 3 / 2;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 2;
+  place-self: auto;
+}
+
+.item-t {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.item-b {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.logo__container {
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.logo {
+  box-sizing: border-box;
+  // filter: invert();
+  background-color: #0000000d;
+  border-radius: 2px;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+} */
+
+// end of import
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+h1 {
+  font-size: var(--f-xxl);
+}
+
+h2 {
+  font-size: var(--f-xl);
+}
+
+h3 {
+  font-size: var(--f-lg);
+}
+
+h4 {
+  font-size: var(--f-md);
+}

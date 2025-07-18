@@ -11,7 +11,7 @@ export default function About() {
     <>
       <main>
         <section>
-          <h2>About us</h2>
+          <h2 className="heading-2">About us</h2>
         </section>
       </main>
     </>

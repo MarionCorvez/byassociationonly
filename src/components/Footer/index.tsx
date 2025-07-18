@@ -4,7 +4,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="theme--anthracite">
+    <footer className="theme--dark">
+      <div className={styles.none}>I will disapear</div>
       <div className={`${styles.container} flex--center screen`}>
         <span>© 2024 - {new Date().getFullYear()} Marion Corvez</span>
 

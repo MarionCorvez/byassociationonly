@@ -1,0 +1,34 @@
+/*
+  ========================================
+  $Typography
+  ========================================
+*/
+
+:root {
+  --f-sm: clamp(0.75rem, 0.26vi + 0.69rem, 0.89rem);
+  --f-base: clamp(0.94rem, 0.45vi + 0.82rem, 1.19rem); // body - 15
+  --f-md: clamp(1.13rem, 0.11vi + 1.1rem, 1.19rem); // h4 - 18
+  --f-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem); // h3 - 25
+  --f-xl: clamp(2rem, 0.34vi + 1.91rem, 2.19rem); // h2 - 32
+  --f-xxl: clamp(2.5rem, 0.76vi + 2.31rem, 2.92rem); // h1 - 40
+}
+
+.heading-2 {
+  font-size: var(--f-xxl);
+}
+
+/* h1 {
+  font-size: var(--f-xxl);
+}
+
+.heading-2 {
+  font-size: var(--f-xl);
+}
+
+h3 {
+  font-size: var(--f-lg);
+}
+
+h4 {
+  font-size: var(--f-md);
+} */

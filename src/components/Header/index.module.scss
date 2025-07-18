@@ -1,5 +1,10 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.nav-brand {
+}
+
 .container {
-  background-color: aqua;
+  // background-color: a.$primary-color;
   gap: var(--padding-xs);
   align-items: center;
   padding: var(--padding-s);

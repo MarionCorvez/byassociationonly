@@ -1,0 +1,42 @@
+/*
+  ========================================
+  $Theme
+  ========================================
+*/
+
+:root {
+  color-scheme: light dark;
+
+  --white-smoke: rgb(245, 245, 245);
+  --cold-morning: rgb(229, 229, 229);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --carbon: rgb(51, 51, 51);
+  --dark-tone-ink: rgb(18, 18, 18);
+  --speed-light: rgb(246, 244, 239);
+  --black-chestnut-oak: rgb(36, 35, 31);
+}
+
+body /* theme--light */,
+.theme--brand,
+.theme--dark,
+.theme--speed-light {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+body {
+  --foreground: light-dark(var(--black), var(--white));
+  --background: light-dark(var(--white), var(--dark-tone-ink));
+}
+
+.theme--dark {
+  --foreground: light-dark(var(--white), var(--dark-tone-ink));
+  --background: light-dark(var(--black), var(--white));
+}
+
+.theme--brand,
+.theme--speed-light {
+  --foreground: light-dark(var(--dark-tone-ink), var(--white-smoke));
+  --background: light-dark(var(--speed-light), var(--black-chestnut-oak));
+}

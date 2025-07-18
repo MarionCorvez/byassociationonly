@@ -1,0 +1,92 @@
+/*
+  ========================================
+  $Layout
+  ========================================
+*/
+
+// Breakpoints
+
+@mixin bp($point) {
+  @if $point == large {
+    @media screen and (width > 920px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media screen and (width >= 720px) {
+      @content;
+    }
+  } @else if $point == small/medium {
+    @media screen and (768px <= width <= 1024px) {
+      @content;
+    }
+  }
+}
+
+// @use "../../styles/abstracts/index.scss" as a;
+// @include a.bp(medium) {}
+
+%flex,
+.flex {
+  display: flex;
+}
+// .section_footer {@extend %flex;}
+
+%wrapper-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section-footer {
+  background-color: blue;
+  @extend %wrapper-grid;
+}
+.grid-50 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-75 {
+  display: grid;
+  grid-template-columns: 75% 25%; // 3fr 1fr
+}
+
+.grid-2c {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  &__item-l {
+    grid-area: 1 / 1 / 3 / 2; // rs / cs / re / ce
+    place-self: auto;
+  }
+  &__item-t {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  &__item-b {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+
+// Center an item
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  > :where(div) {
+    justify-self: stretch;
+  }
+}
+
+.flex--between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex--self {
+  margin-left: auto;
+}
