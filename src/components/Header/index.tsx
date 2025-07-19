@@ -1,6 +1,5 @@
 // "use client";
 import Link from "next/link";
-import styles from "./index.module.scss";
 import SvgLogo from "@/components/ui/SvgLogo";
 // import Switchmode from "@/app/ui/Switchmode";
 
@@ -10,7 +9,7 @@ export default function Header() {
       <Link href={"/"}>
         <SvgLogo />
       </Link>
-      <nav className={`${styles.container} flex--between screen`}>
+      <nav className="flex--between screen">
         <Link href={"/services"}>Services</Link>
         <Link href={"/about-us"}>About</Link>
         <Link href={"/case-studies"}>Case studies</Link>

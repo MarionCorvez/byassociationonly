@@ -1,5 +1,5 @@
 // Global import
-// @forward "./abstracts/index.scss";
+@forward "../components/index.scss";
 
 // Global import & Specific use
 @use "./abstracts/index.scss" as a;

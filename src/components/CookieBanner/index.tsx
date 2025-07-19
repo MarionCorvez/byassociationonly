@@ -1,4 +1,3 @@
-import styles from "./index.module.scss";
 // import Image from "next/image";
 import Link from "next/link";
 // import Contact from "@/app/ui/Contact";
@@ -21,18 +20,18 @@ import Link from "next/link";
 
 export default function CookieBanner() {
   return (
-    <section className={styles.cookie_banner}>
-      <p className={styles.content}>
+    <section className="">
+      <p className="">
         By clicking "Accept All Cookies", you agree to the storing of cookies on
         your device to analyze site usage. View our{" "}
         <a href="/#">Privacy Policy</a>.
       </p>
       <div>
-        <Link className={styles.link} href={"/#"}>
+        <Link className="" href={"/#"}>
           Preferences
         </Link>
-        <button className={styles.button}>Deny</button>
-        <button className={`${styles.button} ${styles.is_dark}`}>Accept</button>
+        <button className="">Deny</button>
+        <button className="">Accept</button>
       </div>
     </section>
   );

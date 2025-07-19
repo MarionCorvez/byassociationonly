@@ -4,6 +4,12 @@
   ========================================
 */
 
+/* $Card
+   ==================================== */
+
+.scrrn {
+}
+
 // Breakpoints
 
 @mixin bp($point) {
@@ -24,6 +30,11 @@
 
 // @use "../../styles/abstracts/index.scss" as a;
 // @include a.bp(medium) {}
+
+// add containers bp
+
+/* $Card
+   ==================================== */
 
 %flex,
 .flex {
@@ -67,6 +78,25 @@
   }
 }
 
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.container {
+  container: container-grid / inline-size;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 20px;
+
+  @container container-grid (width > calc(170px * 3)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 // Center an item
 .grid-center {
   display: grid;
@@ -81,6 +111,9 @@
     justify-self: stretch;
   }
 }
+
+/* $Card
+   ==================================== */
 
 .flex--between {
   display: flex;
