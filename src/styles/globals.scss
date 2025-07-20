@@ -21,35 +21,6 @@
   ========================================
 */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  // background: var(--background);
-  // color: a.var(--base-color);
-  //color: a.$primary-color;
-  padding-top: 90px;
-  font-family: Soehne web leicht, sans-serif;
-  font-size: var(--f-base);
-  font-weight: 200;
-  line-height: 150%;
-  overflow: visible;
-  min-height: 100vh;
-}
-
-/* a {
-  font-size: 25px;
-} */
-
 // import from site
 /* 
 .intro_container {
@@ -122,24 +93,3 @@ body {
 } */
 
 // end of import
-
-/*
-  ========================================
-  Typography
-  ========================================
-*/
-h1 {
-  font-size: var(--f-xxl);
-}
-
-h2 {
-  font-size: var(--f-xl);
-}
-
-h3 {
-  font-size: var(--f-lg);
-}
-
-h4 {
-  font-size: var(--f-md);
-}

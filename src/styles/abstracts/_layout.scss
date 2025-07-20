@@ -4,17 +4,47 @@
   ========================================
 */
 
+:root {
+  --inset: clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
+  --gap: clamp(2rem, calc(1.273rem + 3.636vw), 4rem)
+    clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
+  --outset-s: clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
+  --outset-m: clamp(1rem, calc(0.273rem + 3.636vw), 3rem);
+  --outset-l: clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
+}
+
 /* $Card
    ==================================== */
 
-.scrrn {
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.screen {
+}
+
+header,
+main,
+section,
+footer {
+  --outset: clamp(1.5rem, calc(1.318rem + 0.909vw), 2rem);
+  box-sizing: border-box;
+  padding: var(--outset);
+}
+
+.section--full {
+  --outset: 0;
 }
 
 // Breakpoints
 
 @mixin bp($point) {
   @if $point == large {
-    @media screen and (width > 920px) {
+    @media screen and (width > 1024px) {
       @content;
     }
   } @else if $point == medium {
@@ -36,9 +66,12 @@
 /* $Card
    ==================================== */
 
-%flex,
-.flex {
-  display: flex;
+%flex {
+  @include bp(large) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 // .section_footer {@extend %flex;}
 
@@ -61,10 +94,25 @@
   grid-template-columns: 75% 25%; // 3fr 1fr
 }
 
-.grid-2c {
+// to test for a card with img
+
+.media {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: fit-content(200px) 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "image content"
+    "image footer";
+  grid-gap: 20px;
+  margin-bottom: 4em;
+}
+
+.grid-2c {
+  --cols: 2;
+  --rows: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
 
   &__item-l {
     grid-area: 1 / 1 / 3 / 2; // rs / cs / re / ce
@@ -78,10 +126,15 @@
   }
 }
 
-.grid-auto {
+.grid-auto-fit {
+  --grid-min-col-size: 400px;
+  --grid-flow-spacing: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--grid-min-col-size), 100%), 1fr)
+  );
+  gap: var(--grid-flow-spacing), 1rem;
 }
 
 .container {
@@ -103,6 +156,12 @@
   place-content: center;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -121,5 +180,31 @@
 }
 
 .flex--self {
+  margin-left: auto;
+}
+
+// 3 cols
+.container {
+  display: flex;
+}
+
+.container > * {
+  margin: 0 10px;
+  flex: 1;
+}
+
+// Sticky footer
+.wrapper-full {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+// Push an item
+.main-nav {
+  display: flex;
+}
+
+.push {
   margin-left: auto;
 }

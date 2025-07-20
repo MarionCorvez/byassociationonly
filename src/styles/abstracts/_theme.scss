@@ -11,28 +11,40 @@
   --cold-morning: rgb(229, 229, 229);
   --white: rgb(255, 255, 255);
   --black: rgb(0, 0, 0);
+  --thamar-black: rgb(24, 24, 24);
   --carbon: rgb(51, 51, 51);
+  --kettleman: rgb(97, 97, 97);
   --dark-tone-ink: rgb(18, 18, 18);
   --speed-light: rgb(246, 244, 239);
   --black-chestnut-oak: rgb(36, 35, 31);
 }
 
-body /* theme--light */,
+body /* theme--dark */,  
 .theme--brand,
+.theme--light,
 .theme--dark,
-.theme--speed-light {
+.theme--speed-light,
+button,
+p,
+.link {
   color: var(--foreground);
   background-color: var(--background);
 }
 
-body {
+/* body {
   --foreground: light-dark(var(--black), var(--white));
   --background: light-dark(var(--white), var(--dark-tone-ink));
-}
+} */
 
+body,
 .theme--dark {
   --foreground: light-dark(var(--white), var(--dark-tone-ink));
   --background: light-dark(var(--black), var(--white));
+}
+
+.theme--light {
+  --foreground: light-dark(var(--thamar-black), var(--white));
+  --background: light-dark(var(--white), var(--thamar-black));
 }
 
 .theme--brand,

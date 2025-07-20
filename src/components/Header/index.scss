@@ -62,3 +62,32 @@
     }
   }
 }
+
+/* Responsive cover */
+
+.decorative-image {
+  container-type: inline-size;
+}
+
+.decorative-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@container (min-width: 70vw) {
+  .decorative-image img {
+    max-width: unset;
+    width: 100vw;
+    height: unset;
+    margin-inline-start: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 10/5;
+  }
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

@@ -13,11 +13,14 @@
   --f-xxl: clamp(2.5rem, 0.76vi + 2.31rem, 2.92rem); // h1 - 40
 }
 
-.heading-2 {
-  font-size: var(--f-xxl);
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: var(--f-base);
+  font-weight: 200;
+  line-height: 150%;
 }
 
-/* h1 {
+.heading-1 {
   font-size: var(--f-xxl);
 }
 
@@ -25,10 +28,10 @@
   font-size: var(--f-xl);
 }
 
-h3 {
+.heading-3 {
   font-size: var(--f-lg);
 }
 
-h4 {
+.heading-4 {
   font-size: var(--f-md);
-} */
+}

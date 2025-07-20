@@ -2,15 +2,43 @@
 
 // className={styles.cookie-banner}
 
-.cookie_banner {
-  :where(.content) {
+.cookie-banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%; // check
+  font-size: var(--f-sm);
+  @extend %flex;
+  gap: var(--outset-s);
+
+  :where(.link) {
+    --foreground: var(--thamar-black);
+    border-bottom: 1px solid var(--black);
+    font-weight: 200;
+    text-decoration: none;
   }
+
+  :where(.content) {
+    --foreground: var(--kettleman);
+    flex: 1 1 60%;
+  }
+
   :where(.actions) {
-    :where(.link) {
+    @extend %flex;
+    flex: 1 1 40%;
+    > :where(*) {
+      margin-left: 1rem;
     }
+
     :where(.button) {
+      border: 1px solid var(--black);
+      text-align: center;
+      min-width: 8.75rem;
+      padding: 0.625rem 1.25rem;
+      cursor: pointer;
+      line-height: inherit;
+      display: inline-block;
     }
-    :where(.is_dark) {
+    :where(.is--dark) {
     }
   }
 }
