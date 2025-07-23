@@ -17,6 +17,7 @@
   --dark-tone-ink: rgb(18, 18, 18);
   --speed-light: rgb(246, 244, 239);
   --black-chestnut-oak: rgb(36, 35, 31);
+  --amaranth-deep-purple: rgb(165, 49, 105);
 }
 
 body /* theme--dark */,  
@@ -26,6 +27,7 @@ body /* theme--dark */,
 .theme--speed-light,
 button,
 p,
+a,
 .link {
   color: var(--foreground);
   background-color: var(--background);
@@ -47,8 +49,12 @@ body,
   --background: light-dark(var(--white), var(--thamar-black));
 }
 
-.theme--brand,
 .theme--speed-light {
   --foreground: light-dark(var(--dark-tone-ink), var(--white-smoke));
   --background: light-dark(var(--speed-light), var(--black-chestnut-oak));
+}
+
+.theme--brand {
+  --foreground: var(--white-smoke);
+  --background: var(--amaranth-deep-purple);
 }

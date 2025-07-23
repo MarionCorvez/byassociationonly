@@ -5,7 +5,7 @@
 */
 
 :root {
-  --f-sm: clamp(0.75rem, 0.26vi + 0.69rem, 0.89rem);
+  --f-sm: clamp(0.88rem, 0.34vi + 0.79rem, 1.06rem); // 14
   --f-base: clamp(0.94rem, 0.45vi + 0.82rem, 1.19rem); // body - 15
   --f-md: clamp(1.13rem, 0.11vi + 1.1rem, 1.19rem); // h4 - 18
   --f-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem); // h3 - 25
@@ -13,11 +13,59 @@
   --f-xxl: clamp(2.5rem, 0.76vi + 2.31rem, 2.92rem); // h1 - 40
 }
 
+html {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-size: 16px;
+  font-synthesis: none;
+  font-smooth: always;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 body {
-  font-family: Helvetica, sans-serif;
   font-size: var(--f-base);
   font-weight: 200;
-  line-height: 150%;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  //line-height: 1.1;
+  font-weight: inherit;
+  /* Avoid text overflow */
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Stronger effect than 'pretty'. Attempts to make each line of text the same length */
+  text-wrap: balance;
+}
+
+p,
+strong,
+li,
+figcaption {
+  /* Prevents orphans (ensures the final line of text has at least two words). */
+  text-wrap: pretty;
 }
 
 .heading-1 {

@@ -1,44 +1,50 @@
 @use "../../styles/abstracts/index.scss" as a;
 
-// className={styles.cookie-banner}
+aside {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  //transform: translateY(115px);
+}
 
 .cookie-banner {
-  position: absolute;
-  bottom: 0;
-  width: 100%; // check
+  --gap: var(--s-base);
+  --inset: var(--s-base);
+  --justify: space-between;
   font-size: var(--f-sm);
-  @extend %flex;
-  gap: var(--outset-s);
-
+  @extend %flex-auto;
+  // justify-content: space-between;
   :where(.link) {
     --foreground: var(--thamar-black);
     border-bottom: 1px solid var(--black);
-    font-weight: 200;
-    text-decoration: none;
   }
 
   :where(.content) {
     --foreground: var(--kettleman);
-    flex: 1 1 60%;
+    text-align: center;
+    @include a.bp(medium) {
+      text-align: left;
+    }
   }
 
   :where(.actions) {
+    --gap: var(--s-sm);
+    --justify: flex-end;
     @extend %flex;
-    flex: 1 1 40%;
-    > :where(*) {
-      margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    @include a.bp(medium) {
+      justify-content: var(--justify);
     }
-
     :where(.button) {
       border: 1px solid var(--black);
-      text-align: center;
-      min-width: 8.75rem;
       padding: 0.625rem 1.25rem;
-      cursor: pointer;
-      line-height: inherit;
-      display: inline-block;
-    }
-    :where(.is--dark) {
+      min-width: clamp(5.75rem, calc(4.659rem + 5.455vw), 8.75rem);
+      @include a.bp(large) {
+        // min-width: 8.75rem;
+      }
     }
   }
 }

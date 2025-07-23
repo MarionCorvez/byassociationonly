@@ -5,17 +5,17 @@ import SvgLogo from "@/components/ui/SvgLogo";
 
 export default function Header() {
   return (
-    <header className="theme--anthracite grid-50">
+    <header className="header-container">
       <Link href={"/"}>
         <SvgLogo />
       </Link>
-      <nav className="flex--between screen">
+      <nav className="nav-main">
         <Link href={"/services"}>Services</Link>
         <Link href={"/about-us"}>About</Link>
         <Link href={"/case-studies"}>Case studies</Link>
         <Link href={"/articles"}>Articles</Link>
         <Link href={"/contact"}>Contact</Link>
-        <Link href={"/careers"} className="flex--self">
+        <Link href={"/careers"} className="link--self">
           Careers
         </Link>
       </nav>

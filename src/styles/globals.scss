@@ -12,14 +12,115 @@
   ========================================
 */
 
-/* 1...............................Base */
-/* 2..............................Reset */
+/* 1.............................Medias */
+/* 2..............................Links */
+/* 3...............................Misc */
 
-/*
-  ========================================
-  $Base
-  ========================================
-*/
+/* $Medias
+   ==================================== */
+
+/* Remove unintuitive behaviour such as gaps around media elements.  */
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  display: block;
+  //max-width: 100%;
+  //max-height: 100%;
+  // width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+svg {
+  flex-shrink: 0; /* Stop icon shrinking when inside a flex container */
+  max-inline-size: 100%;
+}
+
+iframe {
+  border: 0;
+  margin: 0 auto;
+  max-inline-size: 100%;
+}
+
+/* $Links & Buttons
+   ==================================== */
+
+a,
+button {
+  all: unset;
+  cursor: pointer;
+  appearance: none;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: currentColor;
+}
+
+button {
+  text-align: center;
+}
+
+button,
+input,
+select,
+textarea,
+fieldset {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  box-sizing: border-box;
+  accent-color: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  background: none;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* $Misc
+   ==================================== */
+
+ol,
+ul,
+li,
+menu {
+  list-style: none;
+}
+
+hr {
+  height: 0;
+  overflow: visible;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+legend {
+  border: 0;
+  white-space: normal;
+}
 
 // import from site
 /* 
@@ -93,3 +194,36 @@
 } */
 
 // end of import
+
+/* Heading animation */
+/* @media (prefers-reduced-motion: no-preference) {
+  .title {
+    animation: 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s 1 normal both
+      running expand;
+  }
+
+  @-webkit-keyframes expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+} */

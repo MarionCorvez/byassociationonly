@@ -5,42 +5,66 @@
 */
 
 :root {
-  --inset: clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
-  --gap: clamp(2rem, calc(1.273rem + 3.636vw), 4rem)
-    clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
-  --outset-s: clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
-  --outset-m: clamp(1rem, calc(0.273rem + 3.636vw), 3rem);
-  --outset-l: clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
+  --screen: 1024px;
+  --s-sm: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem);
+  --s-base: clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
+  --s-md: clamp(1.5rem, calc(1.318rem + 0.909vw), 2rem);
+  --s-lg: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem);
+  --s-xl: clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
+  --s-xxl: clamp(3rem, calc(1.909rem + 5.455vw), 6rem);
 }
 
-/* $Card
+/* $Global
    ==================================== */
 
+html,
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  margin: 0;
-  position: relative;
+  overflow-x: hidden;
+  height: 100%;
 }
 
-.screen {
+body {
+  min-width: 300px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  overscroll-behavior: none;
+  margin: 0;
+}
+
+/* Set display: none on line reaks used as spacing
+   prevent CMS users from using extra line breaks for spacing */
+br + br {
+  display: none;
+}
+
+.layout--center {
+  --outset: 0 auto;
+  width: var(--screen);
+}
+
+.layout--full {
+  --inset: 0;
 }
 
 header,
 main,
 section,
+article,
+aside,
 footer {
-  --outset: clamp(1.5rem, calc(1.318rem + 0.909vw), 2rem);
+  /*
+  --inset: var(--s-xl);
+  --outset: var(--s-md);
+  */
+
   box-sizing: border-box;
-  padding: var(--outset);
+  padding: var(--inset);
+  margin: var(--outset);
 }
 
-.section--full {
-  --outset: 0;
-}
-
-// Breakpoints
+/* $Breakpoints
+   ==================================== */
 
 @mixin bp($point) {
   @if $point == large {
@@ -63,34 +87,80 @@ footer {
 
 // add containers bp
 
-/* $Card
+/* $Flex
    ==================================== */
+
+// OK
+%flex-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap);
+  @include bp(medium) {
+    justify-content: var(--justify);
+  }
+}
+
+%flex-auto {
+  //--gap: var(--s-sm);
+  --basis: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: center;
+  //align-items: center;
+  gap: var(--gap);
+  @include bp(medium) {
+    justify-content: var(--justify);
+  }
+  > :where(*) {
+    flex: 1 1 var(--basis);
+  }
+}
 
 %flex {
   @include bp(large) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: var(--gap);
   }
 }
 // .section_footer {@extend %flex;}
 
-%wrapper-grid {
-  display: grid;
-  gap: 2rem;
+/* $Grid
+   ==================================== */
+
+%grid-cols {
+  /*   --cols: 2;
+  --rows: auto; */
+  @include bp(large) {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+  }
 }
 
-.section-footer {
-  background-color: blue;
-  @extend %wrapper-grid;
-}
-.grid-50 {
+// OK
+%grid-auto {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--basis), 100%), 1fr));
+  > :where(*) {
+    max-height: var(--basis);
+  }
+}
+
+// OK
+.card-container {
+  --basis: 400px;
+  @extend %grid-auto;
 }
 
 .grid-75 {
   display: grid;
+  gap: var(--gap);
   grid-template-columns: 75% 25%; // 3fr 1fr
 }
 
@@ -98,12 +168,12 @@ footer {
 
 .media {
   display: grid;
+  gap: var(--gap);
   grid-template-columns: fit-content(200px) 1fr;
   grid-template-rows: 1fr auto;
   grid-template-areas:
     "image content"
     "image footer";
-  grid-gap: 20px;
   margin-bottom: 4em;
 }
 
@@ -111,6 +181,7 @@ footer {
   --cols: 2;
   --rows: 2;
   display: grid;
+  gap: var(--gap);
   grid-template-columns: repeat(var(--cols), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
 
@@ -130,6 +201,7 @@ footer {
   --grid-min-col-size: 400px;
   --grid-flow-spacing: 2rem;
   display: grid;
+  gap: var(--gap);
   grid-template-columns: repeat(
     auto-fit,
     minmax(min(var(--grid-min-col-size), 100%), 1fr)
@@ -143,29 +215,17 @@ footer {
 
 .grid-3 {
   display: grid;
-  gap: 20px;
+  gap: var(--gap);
 
   @container container-grid (width > calc(170px * 3)) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-// Center an item
-.grid-center {
-  display: grid;
-  place-content: center;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .calendar {
   display: grid;
+  gap: var(--gap);
   grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
   > :where(div) {
     justify-self: stretch;
   }
@@ -174,37 +234,51 @@ footer {
 /* $Card
    ==================================== */
 
-.flex--between {
+// 3 cols
+.flex-auto {
+  --gap: var(--s-sm);
+  --basis: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  > :where(*) {
+    flex: 1 1 var(--basis);
+  }
+}
+
+.flex--50 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  max-height: 400px;
+  > :where(div) {
+    flex: 1 1 50%;
+    min-width: 320px;
+    max-width: 50%;
+    overflow: hidden;
+  }
+}
+
+/* $Helpers
+   ==================================== */
+
+%grid--centered {
+  display: grid;
+  place-content: center;
+}
+
+%flex--centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex--between {
   display: flex;
   justify-content: space-between;
+  gap: var(--gap);
 }
 
-.flex--self {
-  margin-left: auto;
-}
-
-// 3 cols
-.container {
-  display: flex;
-}
-
-.container > * {
-  margin: 0 10px;
-  flex: 1;
-}
-
-// Sticky footer
-.wrapper-full {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-// Push an item
-.main-nav {
-  display: flex;
-}
-
-.push {
+%flex--self {
   margin-left: auto;
 }
