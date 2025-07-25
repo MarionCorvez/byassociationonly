@@ -1,0 +1,7 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.gallery-container {
+  --width: 400px;
+  --height: 400px;
+  @extend %grid-auto;
+}

@@ -1,7 +1,6 @@
 // "use client";
 import Link from "next/link";
 import SvgLogo from "@/components/ui/SvgLogo";
-// import Switchmode from "@/app/ui/Switchmode";
 
 export default function Header() {
   return (
@@ -15,9 +14,7 @@ export default function Header() {
         <Link href={"/case-studies"}>Case studies</Link>
         <Link href={"/articles"}>Articles</Link>
         <Link href={"/contact"}>Contact</Link>
-        <Link href={"/careers"} className="link--self">
-          Careers
-        </Link>
+        <Link href={"/careers"}>Careers</Link>
       </nav>
     </header>
   );

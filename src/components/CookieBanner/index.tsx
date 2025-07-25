@@ -2,22 +2,6 @@
 import Link from "next/link";
 // import Contact from "@/app/ui/Contact";
 
-/*
-.cookie-banner {
-  :where(.content) {
-  }
-  :where(.actions) {
-    :where(.link) {
-    }
-    :where(.button) {
-    }
-    :where(.button--dark) {
-    }
-  }
-}
-
-*/
-
 export default function CookieBanner() {
   return (
     <aside>
@@ -28,7 +12,6 @@ export default function CookieBanner() {
           <a className="link" href="/#">
             Privacy Policy
           </a>
-          .
         </p>
         <div className="actions">
           <Link className="link" href={"/#"}>

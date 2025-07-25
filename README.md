@@ -15,7 +15,7 @@ Reproduce the By Association Only's website with React and Next.js.
 
 ## Introduction
 
-By Association Only is an "Awwwards - site of the day" app. The website provide multiple challenging & fluid design patterns.
+By Association Only is an "Awwwards - site of the day" app. The website provides multiple challenging & fluid design patterns.
 
 ## Steps
 

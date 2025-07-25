@@ -6,7 +6,6 @@
 
 :root {
   color-scheme: light dark;
-
   --white-smoke: rgb(245, 245, 245);
   --cold-morning: rgb(229, 229, 229);
   --white: rgb(255, 255, 255);
@@ -38,7 +37,12 @@ a,
   --background: light-dark(var(--white), var(--dark-tone-ink));
 } */
 
-body,
+body {
+  --foreground: light-dark(var(--white), var(--thamar-black));
+  --background: light-dark(var(--thamar-black), var(--white));
+}
+
+/* cover */
 .theme--dark {
   --foreground: light-dark(var(--white), var(--dark-tone-ink));
   --background: light-dark(var(--black), var(--white));
@@ -47,6 +51,11 @@ body,
 .theme--light {
   --foreground: light-dark(var(--thamar-black), var(--white));
   --background: light-dark(var(--white), var(--thamar-black));
+}
+
+.theme--thamar-black {
+  --foreground: var(--white);
+  --background: var(--thamar-black);
 }
 
 .theme--speed-light {

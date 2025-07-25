@@ -7,13 +7,11 @@ export default function Contact() {
   console.log("Server or client");
   return (
     <>
-      <main>
-        <section>
-          <h2>Contact us</h2>
-          <p>{count} likes</p>
-          <button onClick={() => setCount(count + 1)}>Click me</button>
-        </section>
-      </main>
+      <section>
+        <h2>Contact us</h2>
+        <p>{count} likes</p>
+        <button onClick={() => setCount(count + 1)}>Click me</button>
+      </section>
     </>
   );
 }

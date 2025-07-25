@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.clients-container {
+  --width: 250px;
+  --height: auto;
+  --gap: var(--s-sm);
+  @extend %grid-auto;
+
+  :where(img) {
+    filter: invert(1);
+    opacity: 1;
+    border-radius: 2px;
+    background-color: #0000000d;
+  }
+}

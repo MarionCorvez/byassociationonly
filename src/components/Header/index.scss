@@ -3,14 +3,19 @@
 .header-container {
   --inset: var(--s-base);
   --gap: var(--s-base);
-  --justify: space-between;
   font-size: var(--f-sm);
   @extend %flex-main;
+  @include a.bp(medium/large) {
+    --justify: space-between;
+  }
 }
 
 .nav-main {
   --gap: var(--s-sm);
-  @extend %flex--between;
+  @extend %flex-main;
+  @include a.bp(medium/large) {
+    --justify: flex-end;
+  }
   :where(a:hover) {
     opacity: 0.6;
   }

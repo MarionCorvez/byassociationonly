@@ -23,12 +23,10 @@ export default function Careers() {
   };
   return (
     <>
-      <main>
-        <section>
-          <h2>Careers for {message}</h2>
-          <button onClick={onClick}>Click me</button>
-        </section>
-      </main>
+      <section>
+        <h2>Careers for {message}</h2>
+        <button onClick={onClick}>Click me</button>
+      </section>
     </>
   );
 }

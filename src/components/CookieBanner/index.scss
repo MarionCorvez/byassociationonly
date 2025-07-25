@@ -3,17 +3,16 @@
 aside {
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   //transform: translateY(115px);
 }
 
 .cookie-banner {
   --gap: var(--s-base);
   --inset: var(--s-base);
-  --justify: space-between;
+  --width: 320px;
   font-size: var(--f-sm);
   @extend %flex-auto;
-  // justify-content: space-between;
   :where(.link) {
     --foreground: var(--thamar-black);
     border-bottom: 1px solid var(--black);
@@ -21,30 +20,22 @@ aside {
 
   :where(.content) {
     --foreground: var(--kettleman);
-    text-align: center;
-    @include a.bp(medium) {
-      text-align: left;
+    @include a.bp(small) {
+      text-align: center;
     }
   }
 
   :where(.actions) {
     --gap: var(--s-sm);
-    --justify: flex-end;
-    @extend %flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap);
-    @include a.bp(medium) {
-      justify-content: var(--justify);
+    --justify: center;
+    @extend %flex-main;
+    @include a.bp(medium/large) {
+      --justify: flex-end;
     }
     :where(.button) {
       border: 1px solid var(--black);
       padding: 0.625rem 1.25rem;
       min-width: clamp(5.75rem, calc(4.659rem + 5.455vw), 8.75rem);
-      @include a.bp(large) {
-        // min-width: 8.75rem;
-      }
     }
   }
 }

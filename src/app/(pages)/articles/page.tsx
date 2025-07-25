@@ -11,19 +11,17 @@ export default async function Articles() {
 
   return (
     <>
-      <main>
-        <section>
-          <h2>Articles</h2>
-          {posts &&
-            posts.map((post: { id: Key; title: string; body: string }) => (
-              <article key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
-                <ButtonComponent />
-              </article>
-            ))}
-        </section>
-      </main>
+      <section>
+        <h2>Articles</h2>
+        {posts &&
+          posts.map((post: { id: Key; title: string; body: string }) => (
+            <article key={post.id}>
+              <h3>{post.title}</h3>
+              <p>{post.body}</p>
+              <ButtonComponent />
+            </article>
+          ))}
+      </section>
     </>
   );
 }

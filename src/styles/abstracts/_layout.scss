@@ -6,6 +6,7 @@
 
 :root {
   --screen: 1024px;
+  --screen-l: 1280px;
   --s-sm: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem);
   --s-base: clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
   --s-md: clamp(1.5rem, calc(1.318rem + 0.909vw), 2rem);
@@ -17,17 +18,16 @@
 /* $Global
    ==================================== */
 
-html,
-body {
-  overflow-x: hidden;
+html {
   height: 100%;
 }
 
 body {
+  overflow-x: hidden;
+  min-height: 100%;
   min-width: 300px;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  position: relative;
+  grid-template-rows: auto 1fr 115px auto;
   overscroll-behavior: none;
   margin: 0;
 }
@@ -36,15 +36,6 @@ body {
    prevent CMS users from using extra line breaks for spacing */
 br + br {
   display: none;
-}
-
-.layout--center {
-  --outset: 0 auto;
-  width: var(--screen);
-}
-
-.layout--full {
-  --inset: 0;
 }
 
 header,
@@ -57,10 +48,21 @@ footer {
   --inset: var(--s-xl);
   --outset: var(--s-md);
   */
-
   box-sizing: border-box;
   padding: var(--inset);
   margin: var(--outset);
+}
+
+.layout--center {
+  --outset: 0 auto;
+  max-width: var(--screen);
+}
+.layout--large {
+  --outset: 0 auto;
+  max-width: var(--screen-l);
+}
+.layout--full {
+  --inset: 0;
 }
 
 /* $Breakpoints
@@ -72,11 +74,15 @@ footer {
       @content;
     }
   } @else if $point == medium {
-    @media screen and (width >= 720px) {
+    @media screen and (768px <= width <= 1024px) {
       @content;
     }
-  } @else if $point == small/medium {
-    @media screen and (768px <= width <= 1024px) {
+  } @else if $point == small {
+    @media screen and (width < 768px) {
+      @content;
+    }
+  } @else if $point == medium/large {
+    @media screen and (width >= 768px) {
       @content;
     }
   }
@@ -94,74 +100,81 @@ footer {
 %flex-main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: var(--justify);
   align-items: center;
   gap: var(--gap);
-  @include bp(medium) {
-    justify-content: var(--justify);
-  }
 }
 
-%flex-auto {
-  //--gap: var(--s-sm);
-  --basis: 320px;
-  display: flex;
-  flex-wrap: wrap;
-  //justify-content: center;
-  //align-items: center;
-  gap: var(--gap);
-  @include bp(medium) {
-    justify-content: var(--justify);
-  }
-  > :where(*) {
-    flex: 1 1 var(--basis);
-  }
-}
-
-%flex {
+%flex-large {
   @include bp(large) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: var(--justify);
     align-items: center;
     gap: var(--gap);
   }
 }
-// .section_footer {@extend %flex;}
+
+// for auto cols design
+%flex-auto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  > :where(*) {
+    flex: 1 1 var(--width);
+  }
+}
 
 /* $Grid
    ==================================== */
 
+// for static cols design
 %grid-cols {
-  /*   --cols: 2;
-  --rows: auto; */
-  @include bp(large) {
+  @include bp(medium/large) {
     display: grid;
-    gap: var(--gap);
     grid-template-columns: repeat(var(--cols), 1fr);
     grid-template-rows: repeat(var(--rows), 1fr);
+    gap: var(--gap);
+    > :where(*) {
+      max-height: var(--height);
+    }
   }
 }
 
-// OK
+/* .gallery-container {
+  --height: 400px;
+  --rows: auto;
+  @extend %grid-cols;
+  @include a.bp(medium) {
+    --cols: 2;
+  }
+  @include a.bp(large) {
+    --cols: 3;
+  }
+} */
+
+// for auto cols design
 %grid-auto {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--width), 100%), 1fr));
   gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(min(var(--basis), 100%), 1fr));
   > :where(*) {
-    max-height: var(--basis);
+    max-height: var(--height);
   }
 }
 
-// OK
-.card-container {
-  --basis: 400px;
+/*
+.gallery-container {
+  --width: 400px;
+  --height: 400px;
   @extend %grid-auto;
 }
+*/
 
-.grid-75 {
+%grid-75 {
   display: grid;
   gap: var(--gap);
-  grid-template-columns: 75% 25%; // 3fr 1fr
+  grid-template-columns: auto 1fr; // 3fr 1fr
 }
 
 // to test for a card with img
@@ -231,52 +244,20 @@ footer {
   }
 }
 
-/* $Card
-   ==================================== */
-
-// 3 cols
-.flex-auto {
-  --gap: var(--s-sm);
-  --basis: 320px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap);
-  > :where(*) {
-    flex: 1 1 var(--basis);
-  }
-}
-
-.flex--50 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap);
-  max-height: 400px;
-  > :where(div) {
-    flex: 1 1 50%;
-    min-width: 320px;
-    max-width: 50%;
-    overflow: hidden;
-  }
-}
-
 /* $Helpers
    ==================================== */
 
 %grid--centered {
   display: grid;
   place-content: center;
+  text-align: center;
 }
 
 %flex--centered {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-%flex--between {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--gap);
 }
 
 %flex--self {
