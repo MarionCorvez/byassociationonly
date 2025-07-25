@@ -1,8 +1,12 @@
-import { clients } from "../../lib/placeholder-data";
-
+import { promises as fs } from "fs";
 import Image from "next/image";
 
-export default function Clients() {
+export default async function Clients() {
+  const file = await fs.readFile(
+    process.cwd() + "/src/lib/data/clients.json",
+    "utf8"
+  );
+  const clients = JSON.parse(file);
   return (
     <section className="clients-container">
       {clients.map((client: { title: string; image: string }) => (

@@ -1,5 +1,5 @@
 // import SignIn from "@components/SignIn";
-import Image from "next/image";
+// import Image from "next/image";
 import Clients from "@/components/Clients";
 
 export default function Cases() {
