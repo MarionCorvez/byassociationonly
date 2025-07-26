@@ -120,8 +120,20 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
+  justify-content: var(--justify);
   > :where(*) {
     flex: 1 1 var(--width);
+  }
+}
+
+%flex-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: var(--justify);
+  @include bp(medium/large) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -130,14 +142,12 @@ footer {
 
 // for static cols design
 %grid-cols {
-  @include bp(medium/large) {
-    display: grid;
-    grid-template-columns: repeat(var(--cols), 1fr);
-    grid-template-rows: repeat(var(--rows), 1fr);
-    gap: var(--gap);
-    > :where(*) {
-      max-height: var(--height);
-    }
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: var(--gap);
+  > :where(*) {
+    max-height: var(--height);
   }
 }
 
@@ -190,13 +200,14 @@ footer {
   margin-bottom: 4em;
 }
 
-.grid-2c {
-  --cols: 2;
-  --rows: 2;
+%grid-place {
+  /*   --cols: 12;
+  --rows: auto; */
   display: grid;
   gap: var(--gap);
   grid-template-columns: repeat(var(--cols), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
+  width: 100%;
 
   &__item-l {
     grid-area: 1 / 1 / 3 / 2; // rs / cs / re / ce
@@ -262,4 +273,11 @@ footer {
 
 %flex--self {
   margin-left: auto;
+}
+
+// Trick : apply space to a grid parent
+.grid-parent {
+  --inset: var(--s-base);
+  height: 100%;
+  box-sizing: content-box;
 }

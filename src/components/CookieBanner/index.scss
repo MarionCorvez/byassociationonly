@@ -4,7 +4,8 @@ aside {
   position: fixed;
   bottom: 0;
   width: 100%;
-  //transform: translateY(115px);
+  display: none;
+  transform: translateY(115px);
 }
 
 .cookie-banner {
