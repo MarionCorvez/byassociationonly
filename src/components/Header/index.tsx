@@ -2,30 +2,21 @@
 import Link from "next/link";
 import SvgLogo from "@/components/ui/SvgLogo";
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+//import ReactDOM from "react-dom";
 
 export default function Header() {
-  const [visible, setVisible] = useState(true);
-  const [position, setPosition] = useState(window.pageYOffset);
+  const [windowHeight, setWindowHeight] = useState(0);
+  //const [visible, setVisible] = useState(true);
+  //const [position, setPosition] = useState(window.pageYOffset);
 
   useEffect(() => {
-    const handleScroll = () => {
-      let moving = window.pageYOffset;
-
-      setVisible(position > moving);
-      setPosition(moving);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
-
-  const cls = visible ? "is--visible" : "is--hidden";
+    setWindowHeight(window.innerHeight);
+  }, []);
 
   return (
-    <header className={`${cls} header-container`}>
+    <header className="header-container">
       <div className="nav-container">
+        <h2>Window Height : {windowHeight} </h2>
         <Link href={"/"}>
           <SvgLogo />
         </Link>
