@@ -1,0 +1,13 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.newsletter-container {
+  --inset: var(--s-base);
+  --gap: var(--s-base);
+  border-top: 1px solid #ffffff1a;
+  font-size: var(--f-sm);
+  @extend %flex-mobile;
+  @include a.bp(medium/large) {
+    --justify: space-between;
+    align-content: end;
+  }
+}

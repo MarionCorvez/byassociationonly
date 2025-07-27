@@ -25,10 +25,11 @@
 
   .social-container {
     @extend %flex-main;
-    padding-bottom: 2rem;
+    @include a.bp(small) {
+      padding-bottom: 2rem;
+    }
     @include a.bp(medium/large) {
       align-self: flex-end;
-      padding-bottom: 0;
     }
   }
 }

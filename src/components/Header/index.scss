@@ -2,11 +2,26 @@
 
 .header-container {
   --inset: var(--s-base);
+  position: sticky;
+  top: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.is--visible {
+  opacity: 1;
+}
+
+.is--hidden {
+  opacity: 0;
+}
+
+.nav-container {
   --gap: var(--s-base);
   font-size: var(--f-sm);
   @extend %flex-main;
   @include a.bp(medium/large) {
     --justify: space-between;
+    align-items: start;
   }
 }
 
