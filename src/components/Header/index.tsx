@@ -2,33 +2,51 @@
 import Link from "next/link";
 import SvgLogo from "@/components/ui/SvgLogo";
 import React, { useState, useEffect } from "react";
-//import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
+// import useWindowScroll from "@/hooks/useWindowScroll";
 
 export default function Header() {
-  const [windowHeight, setWindowHeight] = useState(0);
-  //const [visible, setVisible] = useState(true);
-  //const [position, setPosition] = useState(window.pageYOffset);
+  if (typeof window !== "undefined") {
+    const [isVisible, setIsVisible] = useState(true);
+    const [position, setPosition] = useState(window.scrollY);
+    //const [windowHeight, setWindowHeight] = useState(0);
 
-  useEffect(() => {
-    setWindowHeight(window.innerHeight);
-  }, []);
+    useEffect(() => {
+      const handleScroll = () => {
+        let moving = window.scrollY;
 
-  return (
-    <header className="header-container">
-      <div className="nav-container">
-        <h2>Window Height : {windowHeight} </h2>
-        <Link href={"/"}>
-          <SvgLogo />
-        </Link>
-        <nav className="nav-main">
-          <Link href={"/services"}>Services</Link>
-          <Link href={"/about-us"}>About</Link>
-          <Link href={"/case-studies"}>Case studies</Link>
-          <Link href={"/articles"}>Articles</Link>
-          <Link href={"/contact"}>Contact</Link>
-          <Link href={"/careers"}>Careers</Link>
-        </nav>
-      </div>
-    </header>
-  );
+        setIsVisible(position > moving);
+        setPosition(moving);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    });
+
+    //const isVisible = useWindowScroll();
+    return (
+      <>
+        <header
+          className={`header-container ${
+            isVisible ? "is--visible" : "is--hidden"
+          }`}
+        >
+          <div className="nav-container">
+            <Link href={"/"}>
+              <SvgLogo />
+            </Link>
+            <nav className="nav-main">
+              <Link href={"/services"}>Services</Link>
+              <Link href={"/about-us"}>About</Link>
+              <Link href={"/case-studies"}>Case studies</Link>
+              <Link href={"/articles"}>Articles</Link>
+              <Link href={"/contact"}>Contact</Link>
+              <Link href={"/careers"}>Careers</Link>
+            </nav>
+          </div>
+        </header>
+      </>
+    );
+  }
 }
