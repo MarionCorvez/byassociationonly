@@ -17,6 +17,7 @@
     @extend %grid-cols;
     @include a.bp(medium/large) {
       width: 80%;
+      align-content: end;
     }
     @include a.bp(large) {
       --cols: 4;

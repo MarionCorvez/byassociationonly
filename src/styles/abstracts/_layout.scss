@@ -27,7 +27,7 @@ body {
   min-height: 100%;
   min-width: 300px;
   display: grid;
-  grid-template-rows: auto 1fr 115px auto;
+  //grid-template-rows: auto 1fr 115px minmax(0, 1fr);
   overscroll-behavior: none;
   margin: 0;
 }
@@ -146,6 +146,8 @@ footer {
   grid-template-columns: repeat(var(--cols), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
   gap: var(--gap);
+
+  max-height: 100%;
   > :where(*) {
     max-height: var(--height);
   }
@@ -187,8 +189,19 @@ footer {
   grid-template-columns: auto 1fr; // 3fr 1fr
 }
 
-// to test for a card with img
+%grid-areas {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "list image"
+    "text text";
+}
 
+// grid-area: text;
+
+// to test for a card with img
 .media {
   display: grid;
   gap: var(--gap);
