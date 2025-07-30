@@ -1,0 +1,30 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+// section
+.static-container {
+  max-height: 100vh;
+  position: sticky;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+
+// section
+.intro-container {
+  --cols: 2;
+  --gap: var(--s-base);
+  --inset: var(--s-xl);
+  @extend %grid;
+  align-items: end;
+  grid-template-areas: "text text";
+  height: 75vh;
+  @include a.bp(large) {
+    --cols: 2;
+    grid-template-areas: ". text";
+  }
+
+  :where(h1) {
+    grid-area: text;
+    line-height: 1.3;
+  }
+}

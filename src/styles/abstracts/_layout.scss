@@ -140,6 +140,14 @@ footer {
 /* $Grid
    ==================================== */
 
+// basic grid layout
+%grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: var(--gap);
+}
+
 // for static cols design
 %grid-cols {
   display: grid;
