@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function StaticCover() {
   return (
     <>
@@ -18,74 +16,9 @@ export default function StaticCover() {
          /images/maria-tarasova-1600.avif 1600w"
           sizes="100vw"
           src="/images/maria-tarasova-900.avif"
-          alt="Maria Tarasova"
+          alt="Picture of Maria Tarasova"
+          loading="lazy"
         />
-      </section>
-      <section>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        venenatis ante magna, nec facilisis neque facilisis eget. Proin cursus,
-        sem quis sollicitudin efficitur, dui metus egestas eros, sed mattis
-        magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo, vestibulum
-        quis facilisis sit amet, varius consequat quam. Sed a nulla et ex
-        lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Suspendisse venenatis ante magna, nec facilisis neque facilisis eget.
-        Proin cursus, sem quis sollicitudin efficitur, dui metus egestas eros,
-        sed mattis magna nibh ut nulla. Morbi vitae dui velit. Nunc lorem justo,
-        vestibulum quis facilisis sit amet, varius consequat quam. Sed a nulla
-        et ex lacinia maximus ac vel justo. Vivamus consectetur tellus odio, sed
-        tempor nibh tincidunt eget. Praesent laoreet libero vel viverra rutrum.
-        Nulla ligula.
       </section>
     </>
   );

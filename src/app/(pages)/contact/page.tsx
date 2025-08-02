@@ -1,17 +1,9 @@
-// import SignIn from "@components/SignIn";
-"use client";
-import { useState } from "react";
+import Cases from "@/components/Cases";
 
 export default function Contact() {
-  const [count, setCount] = useState(0);
-  console.log("Server or client");
   return (
     <>
-      <section>
-        <h2>Contact us</h2>
-        <p>{count} likes</p>
-        <button onClick={() => setCount(count + 1)}>Click me</button>
-      </section>
+      <Cases />
     </>
   );
 }

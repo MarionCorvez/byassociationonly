@@ -24,7 +24,7 @@ html {
 
 body {
   overflow-x: hidden;
-  min-height: 100%;
+  height: 100vh;
   min-width: 300px;
   display: grid;
   //grid-template-rows: auto 1fr 115px minmax(0, 1fr);
@@ -42,13 +42,17 @@ header,
 main,
 section,
 article,
+div,
 aside,
 footer {
-  /*
-  --inset: var(--s-xl);
-  --outset: var(--s-md);
-  */
   box-sizing: border-box;
+}
+
+header,
+main,
+section,
+aside,
+footer {
   padding: var(--inset);
   margin: var(--outset);
 }
@@ -137,6 +141,14 @@ footer {
   }
 }
 
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: var(--inset);
+  justify-content: var(--justify);
+}
+
 /* $Grid
    ==================================== */
 
@@ -179,7 +191,7 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(min(var(--width), 100%), 1fr));
   gap: var(--gap);
   > :where(*) {
-    max-height: var(--height);
+    height: var(--height);
   }
 }
 
@@ -210,7 +222,7 @@ footer {
 // grid-area: text;
 
 // to test for a card with img
-.media {
+.card-media {
   display: grid;
   gap: var(--gap);
   grid-template-columns: fit-content(200px) 1fr;
@@ -254,9 +266,9 @@ footer {
   gap: var(--grid-flow-spacing), 1rem;
 }
 
-.container {
+/* .container {
   container: container-grid / inline-size;
-}
+} */
 
 .grid-3 {
   display: grid;

@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import Leicht from "next/font/local";
+import Itcgalliard from "next/font/local";
 import "@/styles/globals.scss";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const leicht = Leicht({
+  src: "../../public/fonts/sohne-leicht.woff2",
+  variable: "--f-leicht",
+  display: "swap",
+  weight: "400",
+  fallback: ["system-ui", "arial"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const itcgalliard = Itcgalliard({
+  src: "../../public/fonts/itc-galliard-roman.woff2",
+  variable: "--f-itc",
+  display: "swap",
+  weight: "400",
+  fallback: ["system-ui", "helvetica"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${leicht.variable} ${itcgalliard.variable}`}>
       <body>
         <Header />
         <main>{children}</main>

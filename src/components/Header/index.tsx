@@ -28,16 +28,56 @@ export default function Header() {
         }`}
       >
         <div className="nav-container">
-          <Link href={"/"}>
+          <Link href={"/"} aria-label="Access to Home page" tabIndex={1}>
             <SvgLogo />
           </Link>
-          <nav className="nav-main">
-            <Link href={"/services"}>Services</Link>
-            <Link href={"/about-us"}>About</Link>
-            <Link href={"/case-studies"}>Case studies</Link>
-            <Link href={"/articles"}>Articles</Link>
-            <Link href={"/contact"}>Contact</Link>
-            <Link href={"/careers"}>Careers</Link>
+          <nav
+            className="nav-main"
+            role="navigation"
+            aria-label="Main Navigation"
+          >
+            <Link
+              href={"/services"}
+              aria-label="Access to Services page"
+              tabIndex={2}
+            >
+              Services
+            </Link>
+            <Link
+              href={"/about-us"}
+              aria-label="Access to About page"
+              tabIndex={3}
+            >
+              About
+            </Link>
+            <Link
+              href={"/case-studies"}
+              aria-label="Access to Case studies page"
+              tabIndex={4}
+            >
+              Case studies
+            </Link>
+            <Link
+              href={"/articles"}
+              aria-label="Access to Articles page"
+              tabIndex={5}
+            >
+              Articles
+            </Link>
+            <Link
+              href={"/contact"}
+              aria-label="Access to Contact page"
+              tabIndex={6}
+            >
+              Contact
+            </Link>
+            <Link
+              href={"/careers"}
+              aria-label="Access to Careers page"
+              tabIndex={7}
+            >
+              Careers
+            </Link>
           </nav>
         </div>
       </header>

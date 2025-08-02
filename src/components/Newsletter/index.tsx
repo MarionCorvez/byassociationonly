@@ -33,7 +33,9 @@ export default function Newsletter() {
             autoComplete="on"
             required
           />
-          <button className="theme--light">Sign me up</button>
+          <button className="theme--light" aria-label="Sign in">
+            Sign me up
+          </button>
         </form>
         <p className="newsletter-message">Thank you for your subscription !</p>
       </div>

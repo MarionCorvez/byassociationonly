@@ -19,10 +19,10 @@
 .nav-container {
   --gap: var(--s-base);
   font-size: var(--f-sm);
+  align-items: start;
   @extend %flex-main;
   @include a.bp(medium/large) {
     --justify: space-between;
-    align-items: start;
   }
 }
 

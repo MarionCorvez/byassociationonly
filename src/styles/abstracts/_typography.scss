@@ -15,11 +15,10 @@
 }
 
 html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--f-leicht);
   font-size: 100%;
   font-size: 16px;
   font-synthesis: none;
-  font-smooth: always;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   -moz-text-size-adjust: none;
@@ -58,6 +57,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--f-itc);
   /* Stronger effect than 'pretty'. Attempts to make each line of text the same length */
   text-wrap: balance;
 }

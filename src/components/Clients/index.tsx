@@ -6,20 +6,22 @@ export default async function Clients() {
     process.cwd() + "/src/lib/data/clients.json",
     "utf8"
   );
-  const clients = JSON.parse(file);
+  const datas = JSON.parse(file);
   return (
-    <section className="clients-container">
-      {clients.map((client: { title: string; image: string }) => (
-        <Image
-          key={client.title}
-          className=""
-          src={client.image}
-          alt={client.title}
-          width={250}
-          height={150}
-          priority
-        />
-      ))}
-    </section>
+    <>
+      <section className="clients-container">
+        {datas.map((data: { title: string; image: string }) => (
+          <Image
+            key={data.title}
+            className=""
+            src={data.image}
+            alt={data.title}
+            width={250}
+            height={150}
+            priority
+          />
+        ))}
+      </section>
+    </>
   );
 }
