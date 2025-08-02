@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Cases from "@/components/Cases";
 
 export default function Gallery() {
   return (
     <>
-      <Cases />
       <section className="scroll-container">
         <div className="scroll-sticky">
           <div className="scroll-items">
