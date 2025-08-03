@@ -20,7 +20,7 @@ export default async function Cases() {
             {datas &&
               datas.map(
                 (data: {
-                  id: number | null | undefined;
+                  id: number;
                   content: string;
                   height: number | `${number}` | undefined;
                   width: number | `${number}` | undefined;
@@ -29,7 +29,11 @@ export default async function Cases() {
                   image: string;
                 }) => (
                   <article key={data.id} className="card">
-                    <Link href={"/#"} className="container">
+                    <Link
+                      href={`/articles/${data.id}`}
+                      prefetch={false}
+                      className="container"
+                    >
                       <div className="txt-wrapper">
                         <h2 className="head heading-3">{data.title}</h2>
                         <p className="details">{data.content}</p>

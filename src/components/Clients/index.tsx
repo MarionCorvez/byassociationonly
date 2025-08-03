@@ -18,7 +18,6 @@ export default async function Clients() {
             alt={data.title}
             width={250}
             height={150}
-            priority
           />
         ))}
       </section>

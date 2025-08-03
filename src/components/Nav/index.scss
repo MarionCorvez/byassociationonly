@@ -1,0 +1,39 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.nav-container {
+  --cols: 1;
+  --gap: var(--s-md);
+  font-size: var(--f-sm);
+  @extend %grid-fr;
+  @include a.bp(medium) {
+    --cols: 1fr 2fr;
+  }
+  @include a.bp(large) {
+    --cols: 1fr 1fr;
+  }
+}
+
+.nav-main {
+  --gap: var(--s-base);
+  @extend %flex-main;
+  @include a.bp(medium) {
+    justify-self: end;
+  }
+  @include a.bp(large) {
+    --justify: space-between;
+  }
+  :where(.link) {
+    padding-bottom: 1px;
+  }
+  :where(.link:hover) {
+    opacity: 0.6;
+  }
+  :where(.is--active) {
+    border-bottom: 1px solid currentColor;
+  }
+  :where(.is--self) {
+    @include a.bp(large) {
+      margin-left: auto;
+    }
+  }
+}

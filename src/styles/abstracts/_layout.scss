@@ -204,10 +204,10 @@ footer {
 }
 */
 
-%grid-75 {
+%grid-fr {
   display: grid;
   gap: var(--gap);
-  grid-template-columns: auto 1fr; // 3fr 1fr
+  grid-template-columns: var(--cols); // 3fr 1fr
 }
 
 %grid-areas {

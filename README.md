@@ -24,7 +24,7 @@ By Association Only is an "Awwwards - site of the day" app. The website provides
 2. [x] Step 2: Identify reusable front-end components and patterns
 3. [x] Step 3: Design responsive behavior on different devices
 4. [x] Step 4: Develop static templates
-5. [ ] Step 5: Create and implement styles
+5. [x] Step 5: Create and implement styles
 6. [x] Step 6: Create project's REST API
 7. [ ] Step 7: Develop interactivity and functionality
 8. [ ] Step 8: Consume REST API's
