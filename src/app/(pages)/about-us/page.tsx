@@ -14,7 +14,6 @@ export default function About() {
       <h3 className="heading-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h3>
-      <Gallery />
     </>
   );
 }

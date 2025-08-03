@@ -4,11 +4,7 @@
    ==================================== */
 
 .container-scroll {
-  --outset: var(--s-base);
-}
-
-.container-sticky {
-  width: 100vw;
+  padding: var(--s-base);
 }
 
 .panel {
@@ -16,7 +12,6 @@
   --height: 400px;
   --gap: var(--s-md);
   @extend %grid-auto;
-  //width: 100vw;
 
   :where(.title) {
     max-width: 80%;
@@ -90,16 +85,18 @@
   :where(.icon-wrapper) {
     --width: 24px;
     --height: 24px;
-    transition: width 0.4s ease;
+    transition: transform 0.4s ease;
   }
 
   :where(.icon-wrapper:hover) {
-    --width: 40px;
     --foreground: var(--carbon);
     --background: var(--cold-morning);
     color: var(--foreground);
     background-color: var(--background);
     border: none;
+    @media (prefers-reduced-motion: no-preference) {
+      transform: scale(1.5, 1.5);
+    }
   }
 
   :where(.icon) {
@@ -124,6 +121,7 @@
         view-timeline-name: --scroll-container-tl;
         view-timeline-axis: block;
         display: flex;
+        padding-right: 0;
       }
 
       .container-sticky {

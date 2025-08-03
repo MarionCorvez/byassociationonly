@@ -50,13 +50,11 @@ footer {
 
 header,
 main,
-section,
 aside,
 footer {
   padding: var(--inset);
   margin: var(--outset);
-  width: 100vw;
-  //max-width: 100vw;
+  max-width: 100vw;
 }
 
 .layout--center {
