@@ -1,19 +1,21 @@
 @use "../../styles/abstracts/index.scss" as a;
 
 .newsletter-container {
-  --inset: var(--s-base);
   --gap: var(--s-base);
   border-top: 1px solid #ffffff1a;
   font-size: var(--f-sm);
-  @extend %flex-mobile;
-  @include a.bp(medium/large) {
-    --justify: space-between;
-  }
+  padding: var(--s-base);
+  height: 75vh;
 }
 
 .insights-container {
-  @extend %grid-areas;
-  width: 100%;
+  --cols: 3fr 1fr;
+  @extend %grid-fr;
+  grid-template-areas:
+    "list image"
+    "text .";
+  margin: var(--s-base) 0;
+
   :where(ul) {
     grid-area: list;
     @include a.bp(medium/large) {
@@ -22,6 +24,7 @@
       align-items: center;
     }
   }
+
   :where(li) {
     font-size: var(--f-xxxl);
   }
@@ -38,6 +41,7 @@
     font-size: var(--f-md);
     max-width: 600px;
   }
+
   :where(img) {
     grid-area: image;
     object-fit: contain;
@@ -47,18 +51,28 @@
   }
 }
 
+.form-container {
+  --cols: 3fr 1fr;
+  --rows: 1fr auto;
+  --gap: var(--s-sm);
+  @extend %grid-fr;
+  grid-template-areas:
+    "form ."
+    "message .";
+}
+
 .newsletter-form {
-  gap: var(--s-sm);
+  --justify: space-between;
+  --gap: var(--s-sm);
   font-size: var(--f-sm);
-  max-width: 600px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  grid-area: form;
+  @extend %flex;
+  max-width: 700px;
 
   :where(input) {
     flex-grow: 1;
     padding-left: 1rem;
-    height: 45px;
+    height: 50px;
     background-color: var(--carbon);
     border: 1px solid transparent;
     transition: all 0.2s ease-out;
@@ -70,9 +84,9 @@
     color: var(--speed-light);
   }
   :where(button) {
-    transition: all 0.2s ease-out;
+    transition: border-color 0.2s ease-out;
     border: 1px solid transparent;
-    height: 45px;
+    height: 50px;
     padding: 0 10px;
   }
   button:hover {
@@ -82,11 +96,6 @@
   }
 }
 
-.newsletter-message {
-  @include a.bp(small) {
-    margin-top: 1rem;
-  }
-  @include a.bp(medium/large) {
-    align-self: center;
-  }
+.form-message {
+  grid-area: message;
 }

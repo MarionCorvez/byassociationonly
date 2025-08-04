@@ -2,9 +2,9 @@ export default function StaticCover() {
   return (
     <>
       <section className="intro-container theme--thamar-black">
-        <h1 className="heading-1">
-          The Shopify Plus agency for the world’s most design-conscious luxury
-          brands.
+        <h1 className="heading-1 title">
+          The Shopify Plus agency for the world’s most{" "}
+          <strong>design-conscious</strong> luxury brands.
         </h1>
       </section>
       <section className="static-container">

@@ -1,6 +1,5 @@
 @use "../../styles/abstracts/index.scss" as a;
 
-// section
 .static-container {
   max-height: 100vh;
   position: sticky;
@@ -9,22 +8,21 @@
   z-index: -2;
 }
 
-// section
 .intro-container {
   --cols: 2;
   --gap: var(--s-base);
-  --inset: var(--s-xl);
   @extend %grid;
   align-items: end;
   grid-template-areas: "text text";
-  height: 75vh;
+  height: 60vh;
+  padding: var(--s-base);
   @include a.bp(large) {
-    --cols: 2;
     grid-template-areas: ". text";
   }
 
-  :where(h1) {
+  :where(.title) {
     grid-area: text;
     line-height: 1.3;
+    padding-bottom: var(--s-lg);
   }
 }

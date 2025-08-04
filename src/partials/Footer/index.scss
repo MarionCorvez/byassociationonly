@@ -3,7 +3,6 @@
 .footer-container {
   --inset: var(--s-base);
   --gap: var(--s-base);
-
   font-size: var(--f-sm);
   @extend %flex-mobile;
   @include a.bp(medium/large) {
@@ -13,8 +12,7 @@
 
   .links-container {
     --cols: 2;
-    --rows: auto;
-    @extend %grid-cols;
+    @extend %grid;
     @include a.bp(medium/large) {
       width: 80%;
       align-content: end;
@@ -25,7 +23,7 @@
   }
 
   .social-container {
-    @extend %flex-main;
+    @extend %flex;
     @include a.bp(small) {
       padding-bottom: 2rem;
     }

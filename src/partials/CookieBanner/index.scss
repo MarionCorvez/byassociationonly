@@ -29,7 +29,7 @@ aside {
   :where(.actions) {
     --gap: var(--s-sm);
     --justify: center;
-    @extend %flex-main;
+    @extend %flex;
     @include a.bp(medium/large) {
       --justify: flex-end;
     }

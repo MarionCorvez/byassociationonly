@@ -9,29 +9,38 @@ export default function Footer() {
     <footer className="footer-container">
       <div className="links-container">
         <div>
-          <h5>Telephone</h5>
-          <Link href={"tel:+441480467916"}>+44 (0) 1480 467 916</Link>
+          <h5 className="heading-4">Telephone</h5>
+          <Link href={"tel:+441480467916"} aria-label="Call us">
+            +44 (0) 180 465 915
+          </Link>
         </div>
         <div className="item-2">
-          <h5>General info</h5>
-          <Link href={"mailto:info@agency"}>info@agency</Link>
+          <h5 className="heading-4">General info</h5>
+          <Link href={"mailto:info@agency"} aria-label="Send us an email">
+            info@agency
+          </Link>
         </div>
         <div className="item-3">
-          <h5>Project enquiries</h5>
-          <Link href={"mailto:enquiries@agency?subject=Project%20enquiry"}>
+          <h5 className="heading-4">Project enquiries</h5>
+          <Link
+            href={"mailto:enquiries@agency?subject=Project%20enquiry"}
+            aria-label="Send us an email"
+          >
             enquiries@agency
           </Link>
         </div>
         <div className="item-4">
-          <h5>Careers</h5>
-          <Link href={"/#"}>Job openings</Link>
+          <h5 className="heading-4">Careers</h5>
+          <Link href={"/careers"} aria-label="Access to Careers page">
+            Job openings
+          </Link>
         </div>
       </div>
       <div className="social-container">
-        <Link href={"/#"}>
+        <Link href={"/#"} aria-label="Visit our LinkedIn page">
           <SvgLinkedin />
         </Link>
-        <Link href={"/#"}>
+        <Link href={"/#"} aria-label="Visit our Instagram page">
           <SvgInstagram />
         </Link>
       </div>

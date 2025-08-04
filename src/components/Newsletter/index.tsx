@@ -24,7 +24,7 @@ export default function Newsletter() {
           priority
         />
       </div>
-      <div>
+      <div className="form-container">
         <form className="newsletter-form">
           <input
             type="text"
@@ -37,7 +37,7 @@ export default function Newsletter() {
             Sign me up
           </button>
         </form>
-        <p className="newsletter-message">Thank you for your subscription !</p>
+        <p className="form-message">Thank you for your subscription !</p>
       </div>
     </section>
   );

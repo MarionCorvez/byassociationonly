@@ -9,10 +9,10 @@
   --screen-l: 1280px;
   --s-sm: clamp(0.5rem, calc(0.318rem + 0.909vw), 1rem);
   --s-base: clamp(1rem, calc(0.636rem + 1.818vw), 2rem);
-  --s-md: clamp(1.5rem, calc(1.318rem + 0.909vw), 2rem);
-  --s-lg: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem);
-  --s-xl: clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
-  --s-xxl: clamp(3rem, calc(1.909rem + 5.455vw), 6rem);
+  --s-md: clamp(1.5rem, calc(1.318rem + 0.909vw), 2rem); // 20 - 32
+  --s-lg: clamp(1.5rem, calc(0.955rem + 2.727vw), 3rem); // 24 - 48
+  --s-xl: clamp(2rem, calc(1.273rem + 3.636vw), 4rem); // 32 - 64
+  --s-xxl: clamp(3rem, calc(1.909rem + 5.455vw), 6rem); // 48 - 96
 }
 
 /* $Global
@@ -100,8 +100,8 @@ footer {
 /* $Flex
    ==================================== */
 
-// OK
-%flex-main {
+// basic flex layout
+%flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: var(--justify);
@@ -119,7 +119,7 @@ footer {
   }
 }
 
-// for auto cols design
+// for auto cols design - use %flex
 %flex-auto {
   display: flex;
   flex-wrap: wrap;
@@ -130,6 +130,7 @@ footer {
   }
 }
 
+// suppr
 %flex-mobile {
   display: flex;
   flex-direction: column;
@@ -145,7 +146,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
-  padding: var(--inset);
+  //padding: var(--inset);
   justify-content: var(--justify);
 }
 
@@ -160,67 +161,22 @@ footer {
   gap: var(--gap);
 }
 
-// for static cols design
-%grid-cols {
-  display: grid;
-  grid-template-columns: repeat(var(--cols), 1fr);
-  grid-template-rows: repeat(var(--rows), 1fr);
-  gap: var(--gap);
-
-  max-height: 100%;
-  > :where(*) {
-    max-height: var(--height);
-  }
-}
-
-/* .gallery-container {
-  --height: 400px;
-  --rows: auto;
-  @extend %grid-cols;
-  @include a.bp(medium) {
-    --cols: 2;
-  }
-  @include a.bp(large) {
-    --cols: 3;
-  }
-} */
-
 // for auto cols design
 %grid-auto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(var(--width), 100%), 1fr));
   gap: var(--gap);
-  > :where(article),
-  > :where(div) {
-    height: var(--height);
-  }
 }
-
-/*
-.gallery-container {
-  --width: 400px;
-  --height: 400px;
-  @extend %grid-auto;
-}
-*/
 
 %grid-fr {
   display: grid;
   gap: var(--gap);
   grid-template-columns: var(--cols); // 3fr 1fr
-}
-
-%grid-areas {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas:
+  grid-template-rows: var(--rows); // 1fr auto
+  /*   grid-template-areas:
     "list image"
-    "text text";
+    "text text"; */
 }
-
-// grid-area: text;
 
 // to test for a card with img
 .card-media {
@@ -234,60 +190,12 @@ footer {
   margin-bottom: 4em;
 }
 
-%grid-place {
-  /*   --cols: 12;
-  --rows: auto; */
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(var(--cols), 1fr);
-  grid-template-rows: repeat(var(--rows), 1fr);
-  width: 100%;
+/* $Gallery Area
+   ==================================== */
 
-  &__item-l {
-    grid-area: 1 / 1 / 3 / 2; // rs / cs / re / ce
-    place-self: auto;
-  }
-  &__item-t {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  &__item-b {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-}
-
-.grid-auto-fit {
-  --grid-min-col-size: 400px;
-  --grid-flow-spacing: 2rem;
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(var(--grid-min-col-size), 100%), 1fr)
-  );
-  gap: var(--grid-flow-spacing), 1rem;
-}
-
-/* .container {
-  container: container-grid / inline-size;
+/* .panel {
+  --gap: var(--s-md);
 } */
-
-.grid-3 {
-  display: grid;
-  gap: var(--gap);
-
-  @container container-grid (width > calc(170px * 3)) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.calendar {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(7, 1fr);
-  > :where(div) {
-    justify-self: stretch;
-  }
-}
 
 /* $Helpers
    ==================================== */

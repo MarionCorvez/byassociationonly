@@ -1,9 +1,9 @@
-import Cases from "@/components/Cases";
+import GalleryScroll from "@/components/GalleryScroll";
 
 export default function Contact() {
   return (
     <>
-      <Cases />
+      <GalleryScroll />
     </>
   );
 }
