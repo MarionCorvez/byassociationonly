@@ -1,12 +1,10 @@
-import { promises as fs } from "fs";
 import Card from "@/components/ui/Card";
 
-export default async function GalleryArea() {
-  const file = await fs.readFile(
-    process.cwd() + "/src/lib/data/posts-hp.json",
-    "utf8"
+export default async function GalleryList() {
+  const response = await fetch(
+    "https://688f1a90f21ab1769f8839d2.mockapi.io/cases"
   );
-  const datas = JSON.parse(file);
+  const datas = await response.json();
 
   const dataList = datas.map(
     (data: {
@@ -38,11 +36,15 @@ export default async function GalleryArea() {
     )
   );
 
+  function Gallery({ children, type }: { children: any; type: string }) {
+    return <section className={type}>{children}</section>;
+  }
+
   return (
     <>
-      <section className="gallery gallery-background gallery-area">
+      <Gallery type="gallery gallery-list">
         <div className="panel">{dataList}</div>
-      </section>
+      </Gallery>
     </>
   );
 }

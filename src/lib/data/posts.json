@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "P448",
+    "isFeatured": false,
+    "content": "An award-winning, boundary pushing design makeover for luxury sneaker brand P448.",
+    "image": "/images/transcode-poster-00001.avif",
+    "alt": "Picture of P448 project",
+    "width": "1280",
+    "height": "720"
+  },
+  {
+    "id": "2",
+    "title": "Self-Portrait",
+    "isFeatured": true,
+    "content": "A comprehensive Magento migration and Shopify 2.0 build for premium womenswear label Self-Portrait.",
+    "image": "/images/compressed-poster-00002.avif",
+    "alt": "Picture of Self-Portrait project",
+    "width": "1280",
+    "height": "720"
+  },
+  {
+    "id": "3",
+    "title": "Astrid & Miyu",
+    "isFeatured": true,
+    "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
+    "image": "/images/miyu-p-500.avif",
+    "alt": "Picture of Astrid & Miyu project",
+    "width": "500",
+    "height": "312"
+  },
+  {
+    "id": "4",
+    "title": "Joseph Joseph",
+    "isFeatured": false,
+    "content": "A design revolution and Shopify 2.0 build project for the industry leading product team at Joseph Joseph.",
+    "image": "/images/transcode-poster-00004.avif",
+    "alt": "Picture of Joseph Joseph",
+    "width": "720",
+    "height": "720"
+  },
+  {
+    "id": "5",
+    "title": "Bremont",
+    "isFeatured": false,
+    "content": "Design elevation and Shopify 2.0 upgrade for Bremont, the iconic British watch brand.",
+    "image": "/images/bridal-p-500.avif",
+    "alt": "Picture of Bremont project",
+    "width": "500",
+    "height": "291"
+  },
+  {
+    "id": "6",
+    "title": "Jean Ackins",
+    "isFeatured": true,
+    "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
+    "image": "/images/miyu-p-500.avif",
+    "alt": "Picture of Jean Ackins project",
+    "width": "500",
+    "height": "312"
+  }
+]

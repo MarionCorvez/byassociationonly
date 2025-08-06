@@ -1,3 +1,4 @@
+import GalleryList from "@/components/GalleryList";
 import Link from "next/link";
 
 export default async function Articles() {
@@ -19,6 +20,7 @@ export default async function Articles() {
             </article>
           ))}
       </section>
+      <GalleryList />
     </>
   );
 }

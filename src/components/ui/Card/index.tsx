@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import SvgArrow from "@/components/ui/SvgArrow";
+import ArrowIcon from "../ArrowIcon";
 
 interface CardProps {
   id: number;
@@ -12,6 +12,9 @@ interface CardProps {
   image: string;
   url: string;
   cta: string;
+  arrow: string;
+  cls: string;
+  isFeatured: boolean;
 }
 
 export default async function Card({
@@ -24,21 +27,14 @@ export default async function Card({
   image,
   url,
   cta,
+  arrow,
+  cls,
+  isFeatured,
 }: CardProps) {
   return (
     <>
-      <article key={id} className="card">
+      <article key={id} className={cls}>
         <Link href={url} prefetch={false} className="container">
-          <div className="txt-wrapper">
-            <h2 className="head heading-3">{title}</h2>
-            {content && <p className="details">{content}</p>}
-            <div className="link-wrapper">
-              <p className="link">{cta}</p>
-              <div className="icon-wrapper">
-                <SvgArrow className="icon" />
-              </div>
-            </div>
-          </div>
           <div className="media-wrapper">
             <Image
               className="media"
@@ -47,6 +43,14 @@ export default async function Card({
               width={width}
               height={height}
             />
+          </div>
+          <div className="txt-wrapper">
+            <h2 className="head heading-3">{title}</h2>
+            {content && <p className="details">{content}</p>}
+            <div className="link-wrapper">
+              <p className="link">{cta}</p>
+              <ArrowIcon cls={arrow} />
+            </div>
           </div>
         </Link>
       </article>

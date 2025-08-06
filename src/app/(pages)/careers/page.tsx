@@ -1,32 +1,37 @@
-// client component
-"use client";
-import { useState } from "react";
+import { promises as fs } from "fs";
+import Card from "@/components/ui/Card";
+import Gallery from "@/components/Gallery";
 
-async function postRequest() {
-  // complete URL needed in a server component
-  const response = await fetch("/api", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ name: "Mary" }),
-  });
-  const data = await response.json();
-  return { data };
-}
+export default async function Careers() {
+  const file = await fs.readFile(
+    process.cwd() + "/src/lib/data/posts.json",
+    "utf8"
+  );
+  const datas = JSON.parse(file);
 
-export default function Careers() {
-  const [message, setMessage] = useState("");
-  const onClick = async () => {
-    const { data } = await postRequest();
-    setMessage(data.message);
-  };
+  const dataList = datas.map((data) => (
+    <Card
+      cls={data.isFeatured ? "card card--featured" : "card"}
+      key={data.id}
+      id={data.id}
+      content={data.content}
+      height={data.height}
+      width={data.width}
+      alt={data.alt}
+      title={data.title}
+      image={data.image}
+      cta="Read article"
+      arrow="icon--sm"
+      url={`/articles/${data.id}`}
+      isFeatured={false}
+    />
+  ));
+
   return (
     <>
-      <section>
-        <h2>Careers for {message}</h2>
-        <button onClick={onClick}>Click me</button>
-      </section>
+      <Gallery type="gallery gallery-bloc">
+        <div className="panel">{dataList}</div>
+      </Gallery>
     </>
   );
 }

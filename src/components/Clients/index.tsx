@@ -13,7 +13,6 @@ export default async function Clients() {
         {datas.map((data: { title: string; image: string }) => (
           <Image
             key={data.title}
-            className=""
             src={data.image}
             alt={data.title}
             width={250}

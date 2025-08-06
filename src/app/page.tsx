@@ -1,13 +1,15 @@
 import StaticCover from "@/components/StaticCover";
-
-import Newsletter from "@/components/Newsletter";
+import GalleryScroll from "@/components/GalleryScroll";
+import Clients from "@/components/Clients";
 import GalleryArea from "@/components/GalleryArea";
+import Newsletter from "@/components/Newsletter";
 
 export default function Home() {
   return (
     <>
-      {/* <h1>Home</h1> */}
       <StaticCover />
+      <GalleryScroll />
+      <Clients />
       <GalleryArea />
       <Newsletter />
     </>

@@ -1,8 +1,8 @@
 // import Image from "next/image";
 // import Contact from "@/app/ui/Contact";
 import Link from "next/link";
-import SvgLinkedin from "@/components/ui/SvgLinkedin";
-import SvgInstagram from "@/components/ui/SvgInstagram";
+import SvgLinkedin from "@/components/ui/Svg/SvgLinkedin";
+import SvgInstagram from "@/components/ui/Svg/SvgInstagram";
 
 export default function Footer() {
   return (

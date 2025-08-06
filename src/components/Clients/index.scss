@@ -5,6 +5,8 @@
   --height: auto;
   --gap: var(--s-sm);
   @extend %grid-auto;
+  padding: var(--s-base);
+  margin: var(--s-xxl) 0;
 
   :where(img) {
     filter: invert(1);

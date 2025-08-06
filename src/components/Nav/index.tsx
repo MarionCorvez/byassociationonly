@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import SvgLogo from "@/components/ui/SvgLogo";
+import SvgLogo from "@/components/ui/Svg/SvgLogo";
 
 export default function Nav() {
   const pathname = usePathname();

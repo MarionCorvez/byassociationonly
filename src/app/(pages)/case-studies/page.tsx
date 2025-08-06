@@ -1,16 +1,23 @@
-// import SignIn from "@components/SignIn";
-// import Image from "next/image";
-import Clients from "@/components/Clients";
+import Link from "next/link";
 
-export default function Cases() {
+export default async function CaseStudies() {
+  const response = await fetch(
+    "https://688f1a90f21ab1769f8839d2.mockapi.io/cases"
+  );
+  const datas = await response.json();
+
   return (
     <>
       <section>
-        <h1 className="heading-1">Case studies</h1>
-        <h2 className="heading-2">Our clients</h2>
-        <section className="layout--large">
-          <Clients />
-        </section>
+        <h2>Articles</h2>
+        {datas &&
+          datas.map((data: { id: string; title: string; content: string }) => (
+            <article key={data.id}>
+              <h3>{data.title}</h3>
+              <p>{data.content}</p>
+              <Link href={`/case-studies/${data.id}`}>Link</Link>
+            </article>
+          ))}
       </section>
     </>
   );
