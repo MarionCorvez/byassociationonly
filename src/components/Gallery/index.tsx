@@ -40,6 +40,7 @@ export default async function Gallery() {
         arrow="icon--sm"
         url={`/articles/${data.id}`}
         isFeatured={false}
+        isHp={false}
       />
     )
   );
