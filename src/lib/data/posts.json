@@ -2,6 +2,7 @@
   {
     "id": "1",
     "title": "P448",
+    "isHp": true,
     "isFeatured": false,
     "content": "An award-winning, boundary pushing design makeover for luxury sneaker brand P448.",
     "image": "/images/transcode-poster-00001.avif",
@@ -12,6 +13,7 @@
   {
     "id": "2",
     "title": "Self-Portrait",
+    "isHp": true,
     "isFeatured": true,
     "content": "A comprehensive Magento migration and Shopify 2.0 build for premium womenswear label Self-Portrait.",
     "image": "/images/compressed-poster-00002.avif",
@@ -22,6 +24,7 @@
   {
     "id": "3",
     "title": "Astrid & Miyu",
+    "isHp": false,
     "isFeatured": true,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
     "image": "/images/miyu-p-500.avif",
@@ -32,6 +35,7 @@
   {
     "id": "4",
     "title": "Joseph Joseph",
+    "isHp": true,
     "isFeatured": false,
     "content": "A design revolution and Shopify 2.0 build project for the industry leading product team at Joseph Joseph.",
     "image": "/images/transcode-poster-00004.avif",
@@ -42,6 +46,7 @@
   {
     "id": "5",
     "title": "Bremont",
+    "isHp": false,
     "isFeatured": false,
     "content": "Design elevation and Shopify 2.0 upgrade for Bremont, the iconic British watch brand.",
     "image": "/images/bridal-p-500.avif",
@@ -52,6 +57,7 @@
   {
     "id": "6",
     "title": "Jean Ackins",
+    "isHp": false,
     "isFeatured": true,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
     "image": "/images/miyu-p-500.avif",
