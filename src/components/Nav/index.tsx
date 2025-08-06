@@ -17,6 +17,14 @@ export default function Nav() {
       </Link>
       <nav className="nav-main" role="navigation" aria-label="Main Navigation">
         <Link
+          className={`link ${pathname === "/services" ? "is--active" : ""}`}
+          href={"/services"}
+          aria-label="Access to Services page"
+          tabIndex={2}
+        >
+          Services
+        </Link>
+        <Link
           className={`link ${pathname === "/about-us" ? "is--active" : ""}`}
           href={"/about-us"}
           aria-label="Access to About page"

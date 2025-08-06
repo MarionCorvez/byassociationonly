@@ -1,27 +1,19 @@
 import { promises as fs } from "fs";
 import Card from "@/components/ui/Card";
 
-export default async function Gallery() {
+export default async function Cases() {
   const file = await fs.readFile(
-    process.cwd() + "/src/lib/data/posts.json",
+    process.cwd() + "/src/lib/data/cases.json",
     "utf8"
   );
   const datas = JSON.parse(file);
 
-  // Components en fonction des données
-  // Cases (+ isHighlighted) + CasesFeatured (+ sur page about us)
-  // => gallery gallery-bloc + bck
-  // Clients
-  // Posts + PostsFeatured OK => gallery gallery-list
-  // isHighlighted / isFeatured (= HP)
-  // Cover => Hero
+  // const response = await fetch(
+  //   "https://688f1a90f21ab1769f8839d2.mockapi.io/cases"
+  // );
+  // const datas = await response.json();
 
-  const isFeatured = datas.filter(
-    (data: { isFeatured: boolean }) => data.isFeatured === true
-  );
-
-  // const dataList = datas.map(
-  const dataList = isFeatured.map(
+  const dataList = datas.map(
     (data: {
       id: number;
       content: string;
@@ -47,18 +39,18 @@ export default async function Gallery() {
         alt={data.alt}
         title={data.title}
         image={data.image}
-        cta="Read article"
+        cta="View case study"
         arrow="icon--sm"
-        url={`/articles/${data.id}`}
-        isFeatured={false}
-        isHighlighted={false}
+        url={`/case-studies/${data.id}`}
+        isFeatured
+        isHighlighted
       />
     )
   );
 
   return (
     <>
-      <section className="gallery gallery-list">
+      <section className="gallery gallery-bloc">
         <div className="panel">{dataList}</div>
       </section>
     </>

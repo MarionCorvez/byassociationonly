@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Gallery from "@/components/Gallery";
 
 export const metadata: Metadata = {
-  title: "About us - By Association Only's website reproduction",
+  title: "About us | By Association Only's website reproduction",
   description: "About By Association Only",
   keywords: "website, reproduction",
 };

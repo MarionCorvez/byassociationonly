@@ -1,16 +1,16 @@
 import StaticCover from "@/components/StaticCover";
-import GalleryScroll from "@/components/GalleryScroll";
+import CasesFeatured from "@/components/CasesFeatured";
 import Clients from "@/components/Clients";
-import GalleryArea from "@/components/GalleryArea";
+import PostsFeatured from "@/components/PostsFeatured";
 import Newsletter from "@/components/Newsletter";
 
 export default function Home() {
   return (
     <>
       <StaticCover />
-      <GalleryScroll />
+      <CasesFeatured />
       <Clients />
-      <GalleryArea />
+      <PostsFeatured />
       <Newsletter />
     </>
   );

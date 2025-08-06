@@ -1,14 +1,19 @@
 import { promises as fs } from "fs";
 import Card from "@/components/ui/Card";
 
-export default async function GalleryArea() {
+export default async function PostsFeatured() {
   const file = await fs.readFile(
-    process.cwd() + "/src/lib/data/posts-hp.json",
+    process.cwd() + "/src/lib/data/posts.json",
     "utf8"
   );
   const datas = JSON.parse(file);
 
-  const dataList = datas.map(
+  const isFeatured = datas.filter(
+    (data: { isFeatured: boolean }) => data.isFeatured === true
+  );
+
+  // const dataList = datas.map(
+  const dataList = isFeatured.map(
     (data: {
       id: number;
       content: string;
@@ -17,13 +22,16 @@ export default async function GalleryArea() {
       alt: string;
       title: string;
       image: string;
+      url: string;
       cta: string;
-      cls: string;
       arrow: string;
+      cls: string;
+      isFeatured: boolean;
+      isHighlighted: boolean;
     }) => (
       <Card
-        key={data.id}
         cls="card"
+        key={data.id}
         id={data.id}
         content={data.content}
         height={data.height}
@@ -34,6 +42,8 @@ export default async function GalleryArea() {
         cta="Read article"
         arrow="icon--sm"
         url={`/articles/${data.id}`}
+        isFeatured
+        isHighlighted
       />
     )
   );

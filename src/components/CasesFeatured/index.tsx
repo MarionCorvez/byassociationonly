@@ -4,14 +4,23 @@ import ArrowIcon from "@/components/ui/ArrowIcon";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function GalleryScroll() {
+export default async function CasesFeatured() {
   const file = await fs.readFile(
     process.cwd() + "/src/lib/data/cases.json",
     "utf8"
   );
   const datas = JSON.parse(file);
 
-  const dataList = datas.map(
+  // const response = await fetch(
+  //   "https://688f1a90f21ab1769f8839d2.mockapi.io/cases"
+  // );
+  // const datas = await response.json();
+
+  const isFeatured = datas.filter(
+    (data: { isFeatured: boolean }) => data.isFeatured === true
+  );
+
+  const dataList = isFeatured.map(
     (data: {
       id: number;
       content: string;
@@ -20,13 +29,16 @@ export default async function GalleryScroll() {
       alt: string;
       title: string;
       image: string;
+      url: string;
       cta: string;
-      cls: string;
       arrow: string;
+      cls: string;
+      isFeatured: boolean;
+      isHighlighted: boolean;
     }) => (
       <Card
-        key={data.id}
         cls="card"
+        key={data.id}
         id={data.id}
         content={data.content}
         height={data.height}
@@ -36,7 +48,9 @@ export default async function GalleryScroll() {
         image={data.image}
         cta="View case study"
         arrow="icon--sm"
-        url={`/articles/${data.id}`}
+        url={`/case-studies/${data.id}`}
+        isFeatured
+        isHighlighted
       />
     )
   );

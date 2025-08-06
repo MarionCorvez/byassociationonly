@@ -1,20 +1,38 @@
 [
   {
-    "id": "1",
-    "title": "P448",
-    "isHp": true,
-    "isFeatured": false,
+    "id": "41",
+    "title": "By Association Only Wins 2025 Shopify Build Award",
+    "isFeatured": true,
     "content": "An award-winning, boundary pushing design makeover for luxury sneaker brand P448.",
-    "image": "/images/transcode-poster-00001.avif",
+    "image": "/images/transcode-poster-00004.avif",
     "alt": "Picture of P448 project",
     "width": "1280",
     "height": "720"
   },
+
   {
-    "id": "2",
-    "title": "Self-Portrait",
-    "isHp": true,
+    "id": "42",
+    "title": "Thirteen bridal wear brands on Shopify",
     "isFeatured": true,
+    "image": "/images/bridal-p-500.avif",
+    "alt": "Picture of Thirteen bridal",
+    "width": "500",
+    "height": "291"
+  },
+  {
+    "id": "43",
+    "title": "Bespoke Story Chain visualiser for jewellery brand Astrid & Miyu",
+    "isFeatured": true,
+    "image": "/images/miyu-p-500.avif",
+    "alt": "Picture of Astrid & Miyu project",
+    "width": "500",
+    "height": "312"
+  },
+
+  {
+    "id": "44",
+    "title": "Self-Portrait",
+    "isFeatured": false,
     "content": "A comprehensive Magento migration and Shopify 2.0 build for premium womenswear label Self-Portrait.",
     "image": "/images/compressed-poster-00002.avif",
     "alt": "Picture of Self-Portrait project",
@@ -22,10 +40,9 @@
     "height": "720"
   },
   {
-    "id": "3",
+    "id": "45",
     "title": "Astrid & Miyu",
-    "isHp": false,
-    "isFeatured": true,
+    "isFeatured": false,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
     "image": "/images/miyu-p-500.avif",
     "alt": "Picture of Astrid & Miyu project",
@@ -33,9 +50,8 @@
     "height": "312"
   },
   {
-    "id": "4",
+    "id": "46",
     "title": "Joseph Joseph",
-    "isHp": true,
     "isFeatured": false,
     "content": "A design revolution and Shopify 2.0 build project for the industry leading product team at Joseph Joseph.",
     "image": "/images/transcode-poster-00004.avif",
@@ -44,9 +60,8 @@
     "height": "720"
   },
   {
-    "id": "5",
+    "id": "47",
     "title": "Bremont",
-    "isHp": false,
     "isFeatured": false,
     "content": "Design elevation and Shopify 2.0 upgrade for Bremont, the iconic British watch brand.",
     "image": "/images/bridal-p-500.avif",
@@ -55,10 +70,9 @@
     "height": "291"
   },
   {
-    "id": "6",
+    "id": "48",
     "title": "Jean Ackins",
-    "isHp": false,
-    "isFeatured": true,
+    "isFeatured": false,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
     "image": "/images/miyu-p-500.avif",
     "alt": "Picture of Jean Ackins project",

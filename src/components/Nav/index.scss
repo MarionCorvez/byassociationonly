@@ -5,10 +5,10 @@
   --gap: var(--s-md);
   font-size: var(--f-sm);
   @extend %grid-fr;
-  @include a.bp(medium) {
+  @media screen and (800px <= width <= 1280px) {
     --cols: 1fr 2fr;
   }
-  @include a.bp(large) {
+  @media screen and (width > 1280px) {
     --cols: 1fr 1fr;
   }
 }
@@ -16,15 +16,16 @@
 .nav-main {
   --gap: var(--s-base);
   @extend %flex;
-  @include a.bp(medium) {
+  @media screen and (800px <= width <= 1280px) {
     justify-self: end;
   }
-  @include a.bp(large) {
+  @media screen and (width > 1280px) {
     --justify: space-between;
   }
   :where(.link) {
     padding-bottom: 1px;
     text-shadow: 0px 1px var(--carbon);
+    border-bottom: 1px solid transparent;
   }
   :where(.link:hover) {
     opacity: 0.6;

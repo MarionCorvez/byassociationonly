@@ -15,7 +15,7 @@ interface CardProps {
   arrow: string;
   cls: string;
   isFeatured: boolean;
-  isHp: boolean;
+  isHighlighted: boolean;
 }
 
 export default async function Card({
@@ -31,7 +31,7 @@ export default async function Card({
   arrow,
   cls,
   isFeatured,
-  isHp,
+  isHighlighted,
 }: CardProps) {
   return (
     <>
