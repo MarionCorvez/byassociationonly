@@ -3,11 +3,6 @@
 /* $Card
    ==================================== */
 
-.card--highlighted {
-  background-color: aquamarine;
-  grid-column: span 2;
-}
-
 .card {
   height: var(--height);
 
@@ -41,6 +36,13 @@
   }
 }
 
+.card--highlighted {
+  --height: 90vh;
+  @include a.bp(medium/large) {
+    grid-column: span 2;
+  }
+}
+
 /* $Galleries
    ==================================== */
 
@@ -54,11 +56,9 @@
 
 .gallery-bloc {
   :where(.panel) {
-    --cols: 1;
     --gap: var(--s-xxl) var(--s-md);
     @extend %grid;
     @include a.bp(medium/large) {
-      --cols: 2;
     }
   }
 
@@ -116,7 +116,8 @@
 /* $Gallery Background
    ==================================== */
 
-.gallery-background {
+.gallery-background,
+.card--highlighted {
   :where(.container) {
     --justify: end;
     height: 100%;
@@ -135,12 +136,12 @@
 
   :where(.txt-wrapper) {
     --background: transparent;
-    max-width: 400px;
     padding: var(--s-base);
     align-items: start;
   }
 
   :where(.details) {
+    max-width: 400px;
     text-shadow: 0px 1px var(--carbon);
   }
 }
@@ -187,6 +188,9 @@
 
     :where(.title) {
       max-width: 80%;
+      @media screen and (width >= 1400px) {
+        grid-row: span 3;
+      }
     }
     :where(.cta-wrapper) {
       position: relative;
@@ -229,7 +233,7 @@
         overflow-x: hidden;
 
         :where(.panel) {
-          width: 520vmax;
+          width: 420vmax;
           will-change: transform;
           animation-timing-function: linear;
           animation-fill-mode: forwards;

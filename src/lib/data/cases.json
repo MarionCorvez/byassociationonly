@@ -1,11 +1,44 @@
 [
   {
+    "id": "12",
+    "title": "Sunspel",
+    "isHighlighted": false,
+    "isFeatured": false,
+    "content": "Sunspel commissioned By Association Only to migrate from Magento to Shopify 2.0.",
+    "image": "/images/cases/sunspel.avif",
+    "alt": "Picture of Sunspel project",
+    "width": "1600",
+    "height": "1068"
+  },
+  {
+    "id": "13",
+    "title": "Omorovicza",
+    "isHighlighted": false,
+    "isFeatured": false,
+    "content": "A sophisticated design revolution and migration to Shopify 2.0 for opulent skincare brand Omorovicza.",
+    "image": "/images/cases/omorovicza.avif",
+    "alt": "Picture of Omorovicza",
+    "width": "1191",
+    "height": "625"
+  },
+  {
+    "id": "11",
+    "title": "Seraphine",
+    "isHighlighted": true,
+    "isFeatured": false,
+    "content": "Elegant digital storytelling and Shopify Plus build for London-based maternity wear brand Seraphine.",
+    "image": "/images/cases/seraphine.avif",
+    "alt": "Picture of Seraphine project",
+    "width": "1985",
+    "height": "1239"
+  },
+  {
     "id": "1",
     "title": "P448",
-    "isHighlighted": true,
+    "isHighlighted": false,
     "isFeatured": true,
     "content": "An award-winning, boundary pushing design makeover for luxury sneaker brand P448.",
-    "image": "/images/transcode-poster-00001.avif",
+    "image": "/images/cases/transcode-poster-00001.avif",
     "alt": "Picture of P448 project",
     "width": "1280",
     "height": "720"
@@ -13,32 +46,32 @@
   {
     "id": "2",
     "title": "Self-Portrait",
-    "isHighlighted": true,
+    "isHighlighted": false,
     "isFeatured": true,
     "content": "A comprehensive Magento migration and Shopify 2.0 build for premium womenswear label Self-Portrait.",
-    "image": "/images/compressed-poster-00002.avif",
+    "image": "/images/cases/compressed-poster-00002.avif",
     "alt": "Picture of Self-Portrait project",
     "width": "1280",
     "height": "720"
   },
   {
-    "id": "3",
-    "title": "Astrid & Miyu",
-    "isHighlighted": false,
+    "id": "10",
+    "title": "VEYND",
+    "isHighlighted": true,
     "isFeatured": true,
-    "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
-    "image": "/images/miyu-p-500.avif",
-    "alt": "Picture of Astrid & Miyu project",
-    "width": "500",
-    "height": "312"
+    "content": "A bespoke design and build for new sportswear brand from founders of The Kooples.",
+    "image": "/images/cases/veynd.avif",
+    "alt": "Picture of VEYND project",
+    "width": "1280",
+    "height": "720"
   },
   {
     "id": "4",
     "title": "Joseph Joseph",
-    "isHighlighted": true,
+    "isHighlighted": false,
     "isFeatured": true,
     "content": "A design revolution and Shopify 2.0 build project for the industry leading product team at Joseph Joseph.",
-    "image": "/images/transcode-poster-00004.avif",
+    "image": "/images/cases/transcode-poster-00004.avif",
     "alt": "Picture of Joseph Joseph",
     "width": "720",
     "height": "720"
@@ -49,7 +82,7 @@
     "isHighlighted": false,
     "isFeatured": false,
     "content": "Design elevation and Shopify 2.0 upgrade for Bremont, the iconic British watch brand.",
-    "image": "/images/bridal-p-500.avif",
+    "image": "/images/cases/bridal-p-500.avif",
     "alt": "Picture of Bremont project",
     "width": "500",
     "height": "291"
@@ -57,12 +90,12 @@
   {
     "id": "6",
     "title": "Jean Ackins",
-    "isHighlighted": false,
+    "isHighlighted": true,
     "isFeatured": true,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
-    "image": "/images/miyu-p-500.avif",
+    "image": "/images/cases/jean-ackins.avif",
     "alt": "Picture of Jean Ackins project",
-    "width": "500",
-    "height": "312"
+    "width": "1200",
+    "height": "630"
   }
 ]
