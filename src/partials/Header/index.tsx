@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+
 import Nav from "@/components/Nav";
 
 export default function Header() {
@@ -21,12 +22,14 @@ export default function Header() {
     });
 
     return (
-      <header
-        className={`header-container ${
-          isVisible ? "is--visible" : "is--hidden"
-        }`}
-      >
-        <Nav />
+      <header className="header theme--dark">
+        <div
+          className={`header-container ${
+            isVisible ? "is--visible" : "is--hidden"
+          }`}
+        >
+          <Nav />
+        </div>
       </header>
     );
   }

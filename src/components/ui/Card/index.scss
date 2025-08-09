@@ -135,7 +135,7 @@
   }
 
   :where(.txt-wrapper) {
-    --background: transparent;
+    color: var(--white);
     padding: var(--s-base);
     align-items: start;
   }
@@ -196,6 +196,7 @@
       position: relative;
       @extend %flex--centered;
       height: var(--height);
+      background-color: var(--thamar-black);
     }
     :where(.cta-media) {
       max-width: 160px;

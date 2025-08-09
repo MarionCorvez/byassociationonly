@@ -3,47 +3,53 @@
 import Link from "next/link";
 import SvgLinkedin from "@/components/ui/Svg/SvgLinkedin";
 import SvgInstagram from "@/components/ui/Svg/SvgInstagram";
+import Newsletter from "@/components/Newsletter";
 
 export default function Footer() {
   return (
-    <footer className="footer-container">
-      <div className="links-container">
-        <div>
-          <h5 className="heading-4">Telephone</h5>
-          <Link href={"tel:+441480467916"} aria-label="Call us">
-            +44 (0) 180 465 915
-          </Link>
+    <>
+      <footer className="theme--dark">
+        <Newsletter />
+        <div className="footer-container">
+          <div className="links-container">
+            <div>
+              <h5 className="heading-4">Telephone</h5>
+              <Link href={"tel:+441480467916"} aria-label="Call us">
+                +44 (0) 180 465 915
+              </Link>
+            </div>
+            <div className="item-2">
+              <h5 className="heading-4">General info</h5>
+              <Link href={"mailto:info@agency"} aria-label="Send us an email">
+                info@agency
+              </Link>
+            </div>
+            <div className="item-3">
+              <h5 className="heading-4">Project enquiries</h5>
+              <Link
+                href={"mailto:enquiries@agency?subject=Project%20enquiry"}
+                aria-label="Send us an email"
+              >
+                enquiries@agency
+              </Link>
+            </div>
+            <div className="item-4">
+              <h5 className="heading-4">Careers</h5>
+              <Link href={"/careers"} aria-label="Access to Careers page">
+                Job openings
+              </Link>
+            </div>
+          </div>
+          <div className="social-container">
+            <Link href={"/#"} aria-label="Visit our LinkedIn page">
+              <SvgLinkedin />
+            </Link>
+            <Link href={"/#"} aria-label="Visit our Instagram page">
+              <SvgInstagram />
+            </Link>
+          </div>
         </div>
-        <div className="item-2">
-          <h5 className="heading-4">General info</h5>
-          <Link href={"mailto:info@agency"} aria-label="Send us an email">
-            info@agency
-          </Link>
-        </div>
-        <div className="item-3">
-          <h5 className="heading-4">Project enquiries</h5>
-          <Link
-            href={"mailto:enquiries@agency?subject=Project%20enquiry"}
-            aria-label="Send us an email"
-          >
-            enquiries@agency
-          </Link>
-        </div>
-        <div className="item-4">
-          <h5 className="heading-4">Careers</h5>
-          <Link href={"/careers"} aria-label="Access to Careers page">
-            Job openings
-          </Link>
-        </div>
-      </div>
-      <div className="social-container">
-        <Link href={"/#"} aria-label="Visit our LinkedIn page">
-          <SvgLinkedin />
-        </Link>
-        <Link href={"/#"} aria-label="Visit our Instagram page">
-          <SvgInstagram />
-        </Link>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }

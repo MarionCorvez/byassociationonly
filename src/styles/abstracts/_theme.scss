@@ -7,10 +7,15 @@
 :root {
   color-scheme: light dark;
   --white-smoke: rgb(245, 245, 245);
+  --super-silver: #eee;
   --cold-morning: rgb(229, 229, 229);
   --white: rgb(255, 255, 255);
+  --clouded-vision: #d1d1d1;
   --black: rgb(0, 0, 0);
-  --thamar-black: rgb(24, 24, 24);
+  --thamar-black: #181818;
+  --verified-black: #242424; // logos
+  --black-lacquer: #3e3e3e;
+  --dire-wolf: #282828; // case
   --carbon: rgb(51, 51, 51);
   --kettleman: rgb(97, 97, 97);
   --dark-tone-ink: rgb(18, 18, 18);
@@ -19,51 +24,43 @@
   --amaranth-deep-purple: rgb(165, 49, 105);
 }
 
-body /* theme--dark */,  
-.theme--brand,
+body /* theme--dark */,
+header,
 .theme--light,
 .theme--dark,
+.theme--silver,
 .theme--speed-light,
 .theme--thamar-black,
+.theme--cloud,
 button,
-input,
-p {
+input {
   color: var(--foreground);
   background-color: var(--background);
 }
 
-/* body {
-  --foreground: light-dark(var(--black), var(--white));
-  --background: light-dark(var(--white), var(--dark-tone-ink));
-} */
-
-body {
-  --foreground: light-dark(var(--white), var(--thamar-black));
-  --background: light-dark(var(--thamar-black), var(--white));
-}
-
-/* cover */
+// header / footer
 .theme--dark {
-  --foreground: light-dark(var(--white), var(--dark-tone-ink));
-  --background: light-dark(var(--black), var(--white));
-}
-
-.theme--light {
-  --foreground: light-dark(var(--thamar-black), var(--white));
-  --background: light-dark(var(--white), var(--thamar-black));
-}
-
-.theme--thamar-black {
   --foreground: var(--white);
   --background: var(--thamar-black);
 }
 
-.theme--speed-light {
-  --foreground: light-dark(var(--dark-tone-ink), var(--white-smoke));
-  --background: light-dark(var(--speed-light), var(--black-chestnut-oak));
+// //--clouded-vision
+// intro-articles
+/* .theme--cloud {
+  --foreground: light-dark(var(--thamar-black), var(--white));
+  --background: light-dark(var(--clouded-vision), var(--black-lacquer));
+} */
+
+// theme page cases / about / contact
+// cases + clients restent en dark
+body,
+.theme--silver {
+  --foreground: light-dark(var(--thamar-black), var(--white));
+  --background: light-dark(var(--super-silver), var(--dire-wolf));
 }
 
-.theme--brand {
-  --foreground: var(--white-smoke);
-  --background: var(--amaranth-deep-purple);
+// aside
+.theme--light {
+  --foreground: var(--thamar-black);
+  --background: var(--super-silver);
 }

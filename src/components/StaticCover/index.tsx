@@ -1,12 +1,6 @@
 export default function StaticCover() {
   return (
     <>
-      <section className="intro-container theme--thamar-black">
-        <h1 className="heading-1 title">
-          The Shopify Plus agency for the world’s most{" "}
-          <strong>design-conscious</strong> luxury brands.
-        </h1>
-      </section>
       <section className="static-container">
         <img
           srcSet="/images/maria-tarasova-400.avif 400w,

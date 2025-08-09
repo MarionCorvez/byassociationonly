@@ -1,10 +1,26 @@
-import StaticCover from "@/components/StaticCover";
+import Header from "@/partials/Header";
+import Main from "@/partials/Main";
 import Cases from "@/components/Cases";
+import Hero from "@/components/Hero";
 
 export default function CaseStudies() {
+  const data = {
+    content: {
+      active: "Case studies",
+      txt: "Projects",
+    },
+    title:
+      "Architecting best-in-class ecommerce solutions, so that merchant growth is on-brand & limitless.",
+  };
+
   return (
     <>
-      <StaticCover />
+      <Hero
+        content={data.content}
+        active={data.content.active}
+        txt={data.content.txt}
+        title={data.title}
+      />
       <Cases />
     </>
   );

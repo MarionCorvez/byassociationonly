@@ -1,0 +1,34 @@
+@use "../../styles/abstracts/index.scss" as a;
+
+.intro-container {
+  --cols: 2;
+  --gap: var(--s-base);
+  //z-index: 20;
+  @extend %grid;
+  align-content: end;
+  grid-template-areas: "text text";
+  height: 60vh;
+  padding: var(--s-base) var(--s-base) var(--s-lg);
+  @include a.bp(large) {
+    grid-template-areas: ". text";
+  }
+
+  :where(.intro) {
+    grid-area: text;
+    line-height: 1.3;
+  }
+
+  :where(.ariane) {
+    font-size: var(--f-md);
+    padding-bottom: var(--s-base);
+  }
+
+  :where(.is-active) {
+    text-decoration: underline;
+  }
+
+  .is-active::after {
+    content: "\00a0 \00a0  \00a0 / \00a0 \00a0";
+    display: inline-block;
+  }
+}

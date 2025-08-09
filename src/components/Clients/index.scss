@@ -5,8 +5,8 @@
   --height: auto;
   --gap: var(--s-sm);
   @extend %grid-auto;
-  padding: var(--s-base);
-  margin: var(--s-xxl) 0;
+  padding: var(--s-xxxl) var(--s-base);
+  background-color: var(--dire-wolf);
 
   :where(img) {
     filter: invert(1);
@@ -14,4 +14,12 @@
     border-radius: 2px;
     background-color: #0000000d;
   }
+}
+
+.filter-invert {
+  filter: invert(1);
+}
+
+.filter-revert {
+  filter: invert(0);
 }

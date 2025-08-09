@@ -3,7 +3,7 @@
 :where(.icon-wrapper) {
   @extend %flex--centered;
   border-radius: 25px;
-  border: 1px solid currentColor;
+  border: 1px solid var(--white);
   width: var(--width);
   height: var(--height);
 }
@@ -12,6 +12,7 @@
   --width: 40px;
   --height: 40px;
   position: absolute;
+  color: var(--cold-morning);
 }
 
 :where(.icon--sm) {
@@ -21,10 +22,8 @@
 }
 
 :where(.icon-wrapper:hover) {
-  --foreground: var(--carbon);
-  --background: var(--cold-morning);
-  color: var(--foreground);
-  background-color: var(--background);
+  color: var(--carbon);
+  background-color: var(--cold-morning);
   border: none;
   @media (prefers-reduced-motion: no-preference) {
     transform: scale(1.5, 1.5);

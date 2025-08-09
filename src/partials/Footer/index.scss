@@ -1,10 +1,10 @@
 @use "../../styles/abstracts/index.scss" as a;
 
 .footer-container {
-  --inset: var(--s-base);
   --gap: var(--s-base);
   font-size: var(--f-sm);
   @extend %flex-mobile;
+  padding: var(--s-base);
   @include a.bp(medium/large) {
     --justify: space-between;
     align-content: end;

@@ -7,6 +7,7 @@ export default async function Clients() {
     "utf8"
   );
   const datas = JSON.parse(file);
+
   return (
     <>
       <section className="clients-container">
