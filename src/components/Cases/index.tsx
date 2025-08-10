@@ -30,7 +30,11 @@ export default async function Cases() {
       isHighlighted: boolean;
     }) => (
       <Card
-        cls={data.isHighlighted ? "card card--highlighted" : "card"}
+        cls={
+          data.isHighlighted
+            ? "card card--highlighted gallery-background"
+            : "card"
+        }
         key={data.id}
         id={data.id}
         content={data.content}

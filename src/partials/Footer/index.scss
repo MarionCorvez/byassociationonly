@@ -1,5 +1,14 @@
 @use "../../styles/abstracts/index.scss" as a;
 
+.footer {
+  @include a.bp(medium/large) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .footer-container {
   --gap: var(--s-base);
   font-size: var(--f-sm);

@@ -2,6 +2,7 @@ import Header from "@/partials/Header";
 import Main from "@/partials/Main";
 import Cases from "@/components/Cases";
 import Hero from "@/components/Hero";
+import StaticCover from "@/components/StaticCover";
 
 export default function CaseStudies() {
   const data = {
@@ -21,6 +22,7 @@ export default function CaseStudies() {
         txt={data.content.txt}
         title={data.title}
       />
+      <StaticCover />
       <Cases />
     </>
   );

@@ -8,7 +8,7 @@ import Newsletter from "@/components/Newsletter";
 export default function Footer() {
   return (
     <>
-      <footer className="theme--dark">
+      <footer className="theme--dark footer">
         <Newsletter />
         <div className="footer-container">
           <div className="links-container">

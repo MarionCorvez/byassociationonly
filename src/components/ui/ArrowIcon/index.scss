@@ -3,7 +3,7 @@
 :where(.icon-wrapper) {
   @extend %flex--centered;
   border-radius: 25px;
-  border: 1px solid var(--white);
+  border: 1px solid currentColor;
   width: var(--width);
   height: var(--height);
 }

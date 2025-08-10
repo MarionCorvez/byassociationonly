@@ -36,13 +36,6 @@
   }
 }
 
-.card--highlighted {
-  --height: 90vh;
-  @include a.bp(medium/large) {
-    grid-column: span 2;
-  }
-}
-
 /* $Galleries
    ==================================== */
 
@@ -116,8 +109,7 @@
 /* $Gallery Background
    ==================================== */
 
-.gallery-background,
-.card--highlighted {
+.gallery-background {
   :where(.container) {
     --justify: end;
     height: 100%;
@@ -262,6 +254,32 @@
           width: 400px;
         }
       }
+    }
+  }
+}
+
+/* $Specific Cards
+   ==================================== */
+
+// with .gallery-background
+.card--highlighted {
+  --height: 90vh;
+  @include a.bp(medium/large) {
+    grid-column: span 2;
+  }
+}
+
+// with .gallery-background
+.card--sticky {
+  --height: 100vh;
+  :where(.container) {
+    --justify: baseline;
+  }
+  :where(.txt-wrapper) {
+    position: sticky;
+    top: 0;
+    @include a.bp(medium/large) {
+      max-width: 50%;
     }
   }
 }

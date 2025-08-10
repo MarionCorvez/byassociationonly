@@ -1,4 +1,7 @@
 import { notFound } from "next/navigation";
+import PostNext from "@/components/PostNext";
+import StaticCover from "@/components/StaticCover";
+import PanelPartners from "@/components/PanelPartners";
 
 async function fetchCases(id: string) {
   const response = await fetch(
@@ -27,10 +30,13 @@ export default async function CasePage({
 
   return (
     <>
+      <StaticCover />
       <article key={data.id}>
         <h2>{data.title}</h2>
         <p>{data.content}</p>
       </article>
+      <PanelPartners />
+      <PostNext />
     </>
   );
 }

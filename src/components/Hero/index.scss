@@ -3,7 +3,6 @@
 .intro-container {
   --cols: 2;
   --gap: var(--s-base);
-  //z-index: 20;
   @extend %grid;
   align-content: end;
   grid-template-areas: "text text";

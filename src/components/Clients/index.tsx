@@ -8,19 +8,19 @@ export default async function Clients() {
   );
   const datas = JSON.parse(file);
 
+  const dataList = datas.map((data: { title: string; image: string }) => (
+    <Image
+      key={data.title}
+      src={data.image}
+      alt={data.title}
+      width={250}
+      height={150}
+    />
+  ));
+
   return (
     <>
-      <section className="clients-container">
-        {datas.map((data: { title: string; image: string }) => (
-          <Image
-            key={data.title}
-            src={data.image}
-            alt={data.title}
-            width={250}
-            height={150}
-          />
-        ))}
-      </section>
+      <section className="clients-container">{dataList}</section>
     </>
   );
 }
