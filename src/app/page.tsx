@@ -1,6 +1,6 @@
 import StaticCover from "@/components/StaticCover";
 import CasesFeatured from "@/components/CasesFeatured";
-import Clients from "@/components/Clients";
+import LogoClouds from "@/components/LogoClouds";
 import PostsFeatured from "@/components/PostsFeatured";
 import Hero from "@/components/Hero";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero title={data.title} content={undefined} active={""} txt={""} />
       <StaticCover />
       <CasesFeatured />
-      <Clients />
+      <LogoClouds />
       <PostsFeatured />
     </>
   );

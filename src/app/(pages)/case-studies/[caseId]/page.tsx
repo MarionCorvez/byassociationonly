@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import PostNext from "@/components/PostNext";
 import StaticCover from "@/components/StaticCover";
-import PanelPartners from "@/components/PanelPartners";
+import PostContent from "@/components/PostContent";
+import Testimonial from "@/components/Testimonial";
+import PostImage from "@/components/PostImage";
+import PostNext from "@/components/PostNext";
 
 async function fetchCases(id: string) {
   const response = await fetch(
@@ -35,7 +37,22 @@ export default async function CasePage({
         <h2>{data.title}</h2>
         <p>{data.content}</p>
       </article>
-      <PanelPartners />
+      <PostContent isValue={false} isPartners={false} />
+      <PostContent isValue={false} isPartners={true} />
+      <PostContent isValue={true} isPartners={false} />
+      <PostImage
+        src="/images/cases/case-study-veynd-1.avif"
+        alt="Picture of a woman running"
+        width={1600}
+        height={1111}
+      />
+      <Testimonial />
+      <PostImage
+        src="/images/cases/case-study-veynd-2.avif"
+        alt="Picture of two people dressed with Veyn clothes"
+        width={1600}
+        height={1110}
+      />
       <PostNext />
     </>
   );

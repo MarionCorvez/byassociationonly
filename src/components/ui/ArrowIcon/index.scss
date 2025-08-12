@@ -33,3 +33,7 @@
 :where(.icon) {
   padding: 4px 8px;
 }
+
+:where(.icon--sm:hover) {
+  cursor: pointer;
+}
