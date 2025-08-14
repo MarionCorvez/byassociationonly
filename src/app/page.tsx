@@ -13,7 +13,12 @@ export default function Home() {
   return (
     <>
       <Hero title={data.title} content={undefined} active={""} txt={""} />
-      <StaticCover />
+      <StaticCover
+        src="/images/maria-tarasova-1600.avif"
+        alt="Picture of Maria Tarasova"
+        width={1600}
+        height={1066}
+      />
       <CasesFeatured />
       <LogoClouds />
       <PostsFeatured />

@@ -4,7 +4,7 @@
   --gap: var(--s-base);
   @extend %grid;
   align-items: baseline;
-  padding: var(--s-lg) var(--s-base);
+  padding: var(--s-xxxl) var(--s-base);
 
   @include a.bp(medium/large) {
     --cols: 2;

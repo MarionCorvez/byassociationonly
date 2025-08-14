@@ -22,7 +22,12 @@ export default function CaseStudies() {
         txt={data.content.txt}
         title={data.title}
       />
-      <StaticCover />
+      <StaticCover
+        src="/images/cases/jean-ackins.avif"
+        alt="Picture of Jean Ackins project"
+        width={1200}
+        height={630}
+      />
       <Cases />
     </>
   );

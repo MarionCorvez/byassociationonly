@@ -1,9 +1,12 @@
 @use "../../styles/abstracts/index.scss" as a;
 
 .static-container {
-  max-height: 100vh;
   position: sticky;
   bottom: 0;
   overflow: hidden;
   z-index: -1;
+
+  :where(img) {
+    height: 100vh;
+  }
 }
