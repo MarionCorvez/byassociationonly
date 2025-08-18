@@ -32,7 +32,7 @@ export default async function Cases() {
       <Card
         cls={
           data.isHighlighted
-            ? "card card--highlighted gallery-background"
+            ? "card card--highlighted card--background"
             : "card"
         }
         key={data.id}

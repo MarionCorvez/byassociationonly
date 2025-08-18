@@ -19,7 +19,7 @@ export default function PostCover({
 }: PostCoverProps) {
   return (
     <>
-      <section className="card card--cover gallery-background">
+      <section className="card card--cover card--background">
         <div className="container intro-container">
           <div className="media-wrapper">
             <Image

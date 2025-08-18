@@ -1,4 +1,6 @@
 import HeroSplit from "@/components/HeroSplit";
+import CardStat from "@/components/CardStat";
+import PostContent from "@/components/PostContent";
 
 const data = {
   theme: "theme--dark",
@@ -26,12 +28,8 @@ export default function Careers() {
         href={data.link.href}
         label={data.link.label}
       />
-      <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque qui
-        nobis quidem suscipit cumque! Non, aspernatur! Error dolorem a officia
-        quod voluptate aliquid assumenda pariatur. Delectus ipsam numquam
-        quaerat error.
-      </div>
+      <PostContent isValue={false} isPartners={false} />
+      <CardStat />
     </>
   );
 }

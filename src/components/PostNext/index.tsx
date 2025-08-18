@@ -6,7 +6,7 @@ export default function PostNext() {
   return (
     <>
       <section>
-        <article key="9222" className="card gallery-background card--sticky">
+        <article key="9222" className="card card--background card--sticky">
           <Link href="" className="container">
             <div className="media-wrapper">
               <Image

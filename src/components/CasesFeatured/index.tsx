@@ -37,7 +37,7 @@ export default async function CasesFeatured() {
       isHighlighted: boolean;
     }) => (
       <Card
-        cls="card"
+        cls="card card--background"
         key={data.id}
         id={data.id}
         content={data.content}
@@ -57,7 +57,7 @@ export default async function CasesFeatured() {
 
   return (
     <>
-      <section className="gallery gallery-background gallery-scroll">
+      <section className="gallery gallery-scroll">
         <div className="container-sticky">
           <div className="panel">
             <h2 className="heading-1 title">

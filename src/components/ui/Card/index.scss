@@ -1,6 +1,6 @@
 @use "../../../styles/abstracts/index.scss" as a;
 
-/* $Card
+/* $Cards
    ==================================== */
 
 .card {
@@ -22,7 +22,7 @@
   :where(.media) {
     height: var(--height);
     min-height: 100%;
-    filter: saturate(70%) contrast(80%);
+    filter: saturate(70%) contrast(90%);
   }
 
   :where(.txt-wrapper) {
@@ -106,15 +106,16 @@
   }
 }
 
-/* $Gallery Background
+/* $Card Background
    ==================================== */
 
-.gallery-background {
+.card--background {
   :where(.container) {
     --justify: end;
-    height: 100%;
+    height: var(--height);
     min-height: 0px;
     position: relative;
+    text-shadow: 1px 1px var(--carbon);
   }
 
   :where(.media-wrapper) {
@@ -134,7 +135,6 @@
 
   :where(.details) {
     max-width: 400px;
-    text-shadow: 1px 1px var(--carbon);
   }
 }
 
@@ -258,6 +258,33 @@
   }
 }
 
+/* $Gallery static
+   ==================================== */
+
+.gallery-static {
+  margin-top: 0;
+  :where(.panel) {
+    --cols: 1;
+    --gap: var(--s-sm);
+    @extend %grid;
+    @include a.bp(medium) {
+      --cols: 2;
+    }
+    @include a.bp(large) {
+      --cols: 4;
+    }
+  }
+
+  :where(.txt-wrapper) {
+    --gap: var(--s-sm);
+    text-shadow: 1px 1px var(--carbon);
+  }
+
+  :where(.details) {
+    max-width: 80%;
+  }
+}
+
 /* $Specific Cards
    ==================================== */
 
@@ -285,5 +312,9 @@
 }
 
 .card--cover {
-  height: 100vh;
+  --height: 100vh;
+}
+
+.card--stat {
+  --height: 50vh;
 }

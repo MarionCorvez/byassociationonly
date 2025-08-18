@@ -30,7 +30,7 @@ export default async function PostsFeatured() {
       isHighlighted: boolean;
     }) => (
       <Card
-        cls="card"
+        cls="card card--background"
         key={data.id}
         id={data.id}
         content={data.content}
@@ -50,7 +50,7 @@ export default async function PostsFeatured() {
 
   return (
     <>
-      <section className="gallery gallery-background gallery-area">
+      <section className="gallery gallery-area">
         <div className="panel">{dataList}</div>
       </section>
     </>
