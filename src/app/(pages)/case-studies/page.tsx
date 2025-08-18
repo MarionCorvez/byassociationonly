@@ -1,8 +1,6 @@
-import Header from "@/partials/Header";
-import Main from "@/partials/Main";
-import Cases from "@/components/Cases";
 import Hero from "@/components/Hero";
 import StaticCover from "@/components/StaticCover";
+import Cases from "@/components/Cases";
 
 export default function CaseStudies() {
   const data = {

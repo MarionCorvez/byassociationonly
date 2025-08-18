@@ -20,7 +20,8 @@
     justify-self: end;
   }
   @media screen and (width > 1280px) {
-    --justify: space-between;
+    //--justify: space-between;
+    justify-self: end;
   }
   :where(.link) {
     padding-bottom: 1px;

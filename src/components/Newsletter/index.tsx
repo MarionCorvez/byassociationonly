@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Newsletter() {
   return (
-    <section className="newsletter-container">
+    <div className="newsletter-container">
       <div className="insights-container">
         <ul>
           <li>Design</li>
@@ -26,19 +26,22 @@ export default function Newsletter() {
       </div>
       <div className="form-container">
         <form className="newsletter-form">
+          {/* <label htmlFor="email">Enter your email</label> */}
           <input
-            type="text"
-            placeholder="Enter your email"
+            type="email"
+            name="email"
             id="email"
+            placeholder="Enter your email"
             autoComplete="on"
             required
           />
+
           <button className="theme--light" aria-label="Sign in">
             Sign me up
           </button>
         </form>
-        <p className="form-message">Thank you for your subscription !</p>
+        {/* <p className="form-message">Thank you for your subscription !</p> */}
       </div>
-    </section>
+    </div>
   );
 }

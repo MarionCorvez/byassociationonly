@@ -10,9 +10,9 @@ interface PostImageProps {
 export default function PostImage({ src, alt, width, height }: PostImageProps) {
   return (
     <>
-      <section className="postimage-container">
+      <div className="postimage-container">
         <Image src={src} alt={alt} width={width} height={height} />
-      </section>
+      </div>
     </>
   );
 }

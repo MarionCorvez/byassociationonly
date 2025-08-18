@@ -1,7 +1,7 @@
 export default async function Testimonial() {
   return (
     <>
-      <section className="section-testimonial">
+      <div className="section-testimonial">
         <blockquote className="testimonial-blockquote">
           <p className="heading-3">
             ”From design through to development, and with the consistency of
@@ -13,7 +13,7 @@ export default async function Testimonial() {
         <p className="testimonial-author">
           Damian Carvill, Head of Digital Product
         </p>
-      </section>
+      </div>
     </>
   );
 }

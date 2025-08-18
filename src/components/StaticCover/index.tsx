@@ -10,9 +10,9 @@ interface CoverProps {
 export default function StaticCover({ src, alt, width, height }: CoverProps) {
   return (
     <>
-      <section className="static-container">
+      <div className="static-container">
         <Image src={src} alt={alt} width={width} height={height} />
-      </section>
+      </div>
     </>
   );
 }

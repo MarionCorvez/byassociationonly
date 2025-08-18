@@ -20,7 +20,7 @@ export default function Home() {
         height={1066}
       />
       <CasesFeatured />
-      <LogoClouds />
+      <LogoClouds head="" />
       <PostsFeatured />
     </>
   );

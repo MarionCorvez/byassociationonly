@@ -13,19 +13,19 @@ export default function Footer() {
         <div className="footer-container">
           <div className="links-container">
             <div>
-              <h5 className="heading-4">Telephone</h5>
+              <h2 className="heading-4">Telephone</h2>
               <Link href={"tel:+441480467916"} aria-label="Call us">
                 +44 (0) 180 465 915
               </Link>
             </div>
             <div className="item-2">
-              <h5 className="heading-4">General info</h5>
+              <h2 className="heading-4">General info</h2>
               <Link href={"mailto:info@agency"} aria-label="Send us an email">
                 info@agency
               </Link>
             </div>
             <div className="item-3">
-              <h5 className="heading-4">Project enquiries</h5>
+              <h2 className="heading-4">Project enquiries</h2>
               <Link
                 href={"mailto:enquiries@agency?subject=Project%20enquiry"}
                 aria-label="Send us an email"
@@ -34,7 +34,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="item-4">
-              <h5 className="heading-4">Careers</h5>
+              <h2 className="heading-4">Careers</h2>
               <Link href={"/careers"} aria-label="Access to Careers page">
                 Job openings
               </Link>

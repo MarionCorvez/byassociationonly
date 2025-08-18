@@ -1,27 +1,14 @@
 import { promises as fs } from "fs";
 import Card from "@/components/ui/Card";
 
-export default async function Gallery() {
+export default async function Posts() {
   const file = await fs.readFile(
     process.cwd() + "/src/lib/data/posts.json",
     "utf8"
   );
   const datas = JSON.parse(file);
 
-  // Components en fonction des données
-  // Cases (+ isHighlighted) + CasesFeatured (+ sur page about us)
-  // => gallery gallery-bloc + bck
-  // Clients
-  // Posts + PostsFeatured OK => gallery gallery-list
-  // isHighlighted / isFeatured (= HP)
-  // Cover => Hero
-
-  const isFeatured = datas.filter(
-    (data: { isFeatured: boolean }) => data.isFeatured === true
-  );
-
-  // const dataList = datas.map(
-  const dataList = isFeatured.map(
+  const dataList = datas.map(
     (data: {
       id: number;
       content: string;

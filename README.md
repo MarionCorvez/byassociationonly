@@ -27,7 +27,7 @@ By Association Only is an "Awwwards - site of the day" app. The website provides
 5. [x] Step 5: Create and implement styles
 6. [x] Step 6: Create project's REST API
 7. [ ] Step 7: Develop interactivity and functionality
-8. [ ] Step 8: Consume REST API's
+8. [x] Step 8: Consume REST API's
 9. [ ] Step 9: Optimise project: clean & green code
 10. [ ] Step 10: Write project's documentation
 11. [ ] Step 11: Test and deploy

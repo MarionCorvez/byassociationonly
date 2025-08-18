@@ -1,13 +1,64 @@
 [
   {
-    "id": "41",
+    "id": "50",
     "title": "By Association Only Wins 2025 Shopify Build Award",
+    "isFeatured": false,
+    "content": "We're incredibly proud to announce that By Association Only has been named the 2025 Shopify Build Award Winner, recognising our industry-leading work for luxury sneaker brand P448.",
+    "image": "/images/articles/evening-bao.avif",
+    "alt": "Picture of 2025 Shopify Build Award",
+    "width": "1200",
+    "height": "630"
+  },
+  {
+    "id": "51",
+    "title": "Twenty celebrity-owned companies on Shopify",
+    "isFeatured": false,
+    "content": "From Taylor Swift’s merchandise store to the Beckham's fashion and eyewear brands, we showcase 20 celebrity-owned companies on Shopify.",
+    "image": "/images/articles/nineteen-celebrity-companies.avif",
+    "alt": "Picture of celebrity companies on Shopify",
+    "width": "1200",
+    "height": "630"
+  },
+
+  {
+    "id": "49",
+    "title": "Thirteen bridal wear brands on Shopify",
+    "isFeatured": false,
+    "content": "From made-to-order luxury bridal gowns to more affordable ready-to-wear bridesmaid dresses, we take a look at the bridal stores using Shopify to sell their pieces.",
+    "image": "/images/articles/bridal-brands.avif",
+    "alt": "Picture of Bridal Brands project",
+    "width": "1200",
+    "height": "630"
+  },
+  {
+    "id": "52",
+    "title": "Twenty celebrity-owned companies on Shopify",
+    "isFeatured": false,
+    "content": "From Taylor Swift’s merchandise store to the Beckham's fashion and eyewear brands, we showcase 20 celebrity-owned companies on Shopify.",
+    "image": "/images/articles/nineteen-celebrity-companies.avif",
+    "alt": "Picture of celebrity companies on Shopify",
+    "width": "1200",
+    "height": "630"
+  },
+  {
+    "id": "53",
+    "title": "By Association Only shortlisted to win Awwwards ecommerce site of the year title for P448",
+    "isFeatured": false,
+    "content": "Public voting is now open for the Awwwwards annuals 2024. Our work with luxury sneaker brand P448 has been nominated in the ecommerce site of the year category! Find out how to vote here.",
+    "image": "/images/articles/p448-awwwards.avif",
+    "alt": "Picture of P448 Awwwards",
+    "width": "1200",
+    "height": "630"
+  },
+  {
+    "id": "54",
+    "title": "By Association Only sponsors Vervaunt’s Pulse Ecommerce Summit for the third year",
     "isFeatured": true,
-    "content": "An award-winning, boundary pushing design makeover for luxury sneaker brand P448.",
-    "image": "/images/articles/p448.avif",
-    "alt": "Picture of P448 project",
-    "width": "1280",
-    "height": "720"
+    "content": "Last week London-based ecommerce consultancy and paid media agency Vervaunt hosted the third Pulse Ecommerce Summit at The Brewery in London. Here are the highlights.",
+    "image": "/images/articles/pulse-summit-2024.avif",
+    "alt": "Picture of the third Pulse Ecommerce Summit",
+    "width": "1200",
+    "height": "630"
   },
 
   {
@@ -34,7 +85,7 @@
     "title": "Self-Portrait",
     "isFeatured": false,
     "content": "A comprehensive Magento migration and Shopify 2.0 build for premium womenswear label Self-Portrait.",
-    "image": "/images/compressed-poster-00002.avif",
+    "image": "/images/articles/compressed-poster-00002.avif",
     "alt": "Picture of Self-Portrait project",
     "width": "1280",
     "height": "720"
@@ -44,7 +95,7 @@
     "title": "Astrid & Miyu",
     "isFeatured": false,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
-    "image": "/images/miyu-p-500.avif",
+    "image": "/images/articles/miyu-p-500.avif",
     "alt": "Picture of Astrid & Miyu project",
     "width": "500",
     "height": "312"
@@ -54,7 +105,7 @@
     "title": "Joseph Joseph",
     "isFeatured": false,
     "content": "A design revolution and Shopify 2.0 build project for the industry leading product team at Joseph Joseph.",
-    "image": "/images/transcode-poster-00004.avif",
+    "image": "/images/articles/transcode-poster-00004.avif",
     "alt": "Picture of Joseph Joseph",
     "width": "720",
     "height": "720"
@@ -64,7 +115,7 @@
     "title": "Bremont",
     "isFeatured": false,
     "content": "Design elevation and Shopify 2.0 upgrade for Bremont, the iconic British watch brand.",
-    "image": "/images/bridal-p-500.avif",
+    "image": "/images/articles/bridal-p-500.avif",
     "alt": "Picture of Bremont project",
     "width": "500",
     "height": "291"
@@ -74,7 +125,7 @@
     "title": "Jean Ackins",
     "isFeatured": false,
     "content": "A sophisticated design revolution and migration to Shopify 2.0 for British jewellery brand Astrid & Miyu.",
-    "image": "/images/miyu-p-500.avif",
+    "image": "/images/articles/miyu-p-500.avif",
     "alt": "Picture of Jean Ackins project",
     "width": "500",
     "height": "312"

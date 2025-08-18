@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import Image from "next/image";
 
-export default async function LogoClouds() {
+export default async function LogoClouds({ head }: { head: string }) {
   const file = await fs.readFile(
     process.cwd() + "/src/lib/data/clients.json",
     "utf8"
@@ -20,7 +20,10 @@ export default async function LogoClouds() {
 
   return (
     <>
-      <section className="logo-container">{dataList}</section>
+      <section className="logo-clouds">
+        {head && <h2 className="heading-2 title">{head}</h2>}
+        <div className="container">{dataList}</div>
+      </section>
     </>
   );
 }
