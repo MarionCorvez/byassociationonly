@@ -58,6 +58,10 @@
   grid-template-areas:
     "form ."
     "message .";
+
+  :where(.message) {
+    grid-area: message;
+  }
 }
 
 .newsletter-form {
@@ -93,8 +97,4 @@
     --background: var(--thamar-black);
     border: 1px solid var(--white);
   }
-}
-
-.form-message {
-  grid-area: message;
 }

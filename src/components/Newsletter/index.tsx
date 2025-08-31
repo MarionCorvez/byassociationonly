@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NewsletterForm from "../NewsletterForm";
 
 export default function Newsletter() {
   return (
@@ -24,24 +25,7 @@ export default function Newsletter() {
           priority
         />
       </div>
-      <div className="form-container">
-        <form className="newsletter-form">
-          {/* <label htmlFor="email">Enter your email</label> */}
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            autoComplete="on"
-            required
-          />
-
-          <button className="theme--light" aria-label="Sign in">
-            Sign me up
-          </button>
-        </form>
-        {/* <p className="form-message">Thank you for your subscription !</p> */}
-      </div>
+      <NewsletterForm />
     </div>
   );
 }
